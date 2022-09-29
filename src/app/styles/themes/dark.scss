@@ -1,6 +1,9 @@
 .app.dark {
-  --bg-color: rgb(40, 40, 40);
+  --bg-color: rgb(33, 31, 40);
+  --inverted-bg-color: rgb(255, 255, 255);
 
   --primary-color: orange;
   --secondary-color: rgb(238, 202, 182);
+  --inverted-primary-color: rgb(33, 31, 40);
+  --inverted-secondary-color: rgb(143, 86, 164);
 }

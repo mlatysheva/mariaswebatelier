@@ -1,0 +1,24 @@
+{
+	"React component": {
+	"scope": "typescriptreact",
+	"prefix": "rcu",
+	"body": [
+    "import React from 'react';",
+    "import { classNames } from 'shared/lib/classNames/classNames';",
+    "import cls from './$FILE$.module.scss';",
+    "",
+    "interface $1:NameProps {",
+    "  className?: string;",
+    "};",
+    "",
+    "export const $2:Name = ({className}: $3:NameProps) => {",
+    "  return (",
+    "    <div className={classNames(cls.$4:Name, {}, [className])}>",
+    "      $0",
+    "    </div>",
+    "  )",
+    "};",
+    ],
+  "description": "React component",
+  },
+}

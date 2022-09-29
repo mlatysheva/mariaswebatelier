@@ -1,21 +1,15 @@
-import React, { Suspense, useContext, useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import React from "react";
 import './styles/index.scss';
-import { useTheme } from "./providers/ThemeProvider";
-import { classNames } from "../shared/lib/classNames/classNames";
-import { AboutPage } from "../pages/AboutPage";
-import { MainPage } from "../pages/MainPage";
-import { AppRouter } from "./providers/router";
+import { useTheme } from "app/providers/ThemeProvider";
+import { classNames } from "shared/lib/classNames/classNames";
+import { AppRouter } from "app/providers/router";
+import { Navbar } from "widgets/Navbar";
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <div className={classNames('app', {}, [theme])}>
-      <button onClick={toggleTheme}>
-        THEME
-      </button>
-      <Link to={'/'}>Home</Link>
-      <Link to={'/about'}>About</Link>
+      <Navbar />
       <AppRouter />
     </div>
   );
