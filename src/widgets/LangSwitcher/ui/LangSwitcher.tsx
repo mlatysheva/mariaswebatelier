@@ -6,7 +6,7 @@ import cls from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
   className?: string;
-};
+}
 
 export const LangSwitcher = ({className}: LangSwitcherProps) => {
   const { t, i18n } = useTranslation();

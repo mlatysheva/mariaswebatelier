@@ -6,7 +6,7 @@ import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
   className?: string;
-};
+}
 
 export const Sidebar = (props: SidebarProps) => {
   const [collapsed, setCollapsed] = React.useState(false);
