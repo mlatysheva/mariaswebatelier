@@ -4,5 +4,6 @@
   "home": "Главная",
   "about": "О нас",
   "language": "English",
-  "toggle": "Скрыть"
+  "toggle": "Скрыть",
+  "notFound": "Страница не найдена"
 }
