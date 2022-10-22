@@ -1,7 +1,11 @@
 {
   "about": "about",
+  "goHome": "goHome",
   "home": "home",
   "language": "language",
   "notFound": "notFound",
-  "toggle": "toggle"
+  "reloadPage": "reloadPage",
+  "throw error": "throw error",
+  "toggle": "toggle",
+  "unforseenError": "unforseenError"
 }
