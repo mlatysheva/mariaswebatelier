@@ -1,4 +1,5 @@
 .Button {
+  padding: 0.5rem;
   cursor: pointer;
   color: var(--inverted-primary-color);
 }
@@ -12,4 +13,10 @@
 
 .theme-button {
   margin-bottom: 20px;
+}
+
+.outline {
+  border: 1px solid darkblue;
+  color: darkblue;
+  background: none;
 }
