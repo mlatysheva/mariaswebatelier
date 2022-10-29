@@ -1,7 +1,7 @@
 .Button {
   padding: 0.5rem;
   cursor: pointer;
-  color: var(--inverted-primary-color);
+  color: var(--primary-color);
 }
 
 .clear {
@@ -16,7 +16,7 @@
 }
 
 .outline {
-  border: 1px solid darkblue;
-  color: darkblue;
+  border: 1px solid ;
+  color: var(--primary-color);
   background: none;
 }
