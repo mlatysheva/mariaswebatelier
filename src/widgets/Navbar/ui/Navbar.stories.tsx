@@ -2,19 +2,19 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import 'app/styles/index.scss';
-import { Sidebar } from "./Sidebar";
-import { ThemeDecorator } from "../../../../shared/config/storybook/ThemeDecorator";
-import { Theme } from "../../../../app/providers/ThemeProvider/lib/ThemeContext";
+import { Navbar } from "./Navbar";
+import { ThemeDecorator } from "../../../shared/config/storybook/ThemeDecorator";
+import { Theme } from "../../../app/providers/ThemeProvider/lib/ThemeContext";
 
 export default {
-  title: 'widgets/Sidebar',
-  component: Sidebar,
+  title: 'widgets/Narbar',
+  component: Navbar,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof Sidebar>;
+} as ComponentMeta<typeof Navbar>;
 
-const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />;
+const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

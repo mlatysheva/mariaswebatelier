@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button, ThemeButton } from './Button';
 import 'app/styles/index.scss';
-import { ThemeDecorator } from "../../config/storybook/ThemeDecorator/ThemeDecorator";
+import { ThemeDecorator } from "../../config/storybook/ThemeDecorator";
 import { Theme } from "../../../app/providers/ThemeProvider/lib/ThemeContext";
 
 export default {
