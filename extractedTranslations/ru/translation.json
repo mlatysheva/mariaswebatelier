@@ -1,11 +1,11 @@
 {
-  "about": "about",
-  "goHome": "goHome",
-  "home": "home",
-  "language": "language",
-  "notFound": "notFound",
-  "reloadPage": "reloadPage",
-  "throw error": "throw error",
-  "toggle": "toggle",
-  "unforseenError": "unforseenError"
+  "about": "О нас",
+  "goHome": "на Главную",
+  "home": "Главная",
+  "language": "язык",
+  "notFound": "Страница не найдена",
+  "reloadPage": "Перезагрузить страницу",
+  "throw error": "Выбросить ошибку",
+  "toggle": "Скрыть/Показать",
+  "unforseenError": "Непредвиденная ошибка"
 }

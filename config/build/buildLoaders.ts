@@ -21,7 +21,7 @@ export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
             {
               locales: ['en', 'ru'],
               // keyAsDefaultValue: ['en'],
-              keyAsDefaultValue: true
+              keyAsDefaultValue: false
             }
           ]
         ]

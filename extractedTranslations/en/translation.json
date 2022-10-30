@@ -1,11 +1,11 @@
 {
-  "about": "about",
-  "goHome": "goHome",
-  "home": "home",
-  "language": "language",
-  "notFound": "notFound",
-  "reloadPage": "reloadPage",
-  "throw error": "throw error",
-  "toggle": "toggle",
-  "unforseenError": "unforseenError"
+  "about": "About",
+  "goHome": "Go Home",
+  "home": "Home",
+  "language": "Language",
+  "notFound": "Page not found",
+  "reloadPage": "Reload page",
+  "throw error": "Throw error",
+  "toggle": "Toggle",
+  "unforseenError": "Unforseen error"
 }
