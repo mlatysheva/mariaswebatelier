@@ -6,21 +6,19 @@ interface SpinnerProps {
   className?: string;
 }
 
-export const Spinner = ({className}: SpinnerProps) => {
-  return (
-    <div className={classNames('lds-spinner', {}, [className ? className : ''])}>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  )
-};
+export const Spinner = ({ className }: SpinnerProps) => (
+  <div className={classNames('lds-spinner', {}, [className || ''])}>
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
+);

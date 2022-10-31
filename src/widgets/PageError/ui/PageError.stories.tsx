@@ -2,9 +2,9 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import 'app/styles/index.scss';
-import { ThemeDecorator } from "../../../shared/config/storybook/ThemeDecorator";
-import { Theme } from "../../../app/providers/ThemeProvider/lib/ThemeContext";
-import { PageError } from "./PageError";
+import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator';
+import { Theme } from '../../../app/providers/ThemeProvider/lib/ThemeContext';
+import { PageError } from './PageError';
 
 export default {
   title: 'widgets/PageError',
@@ -22,6 +22,3 @@ Light.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-
-

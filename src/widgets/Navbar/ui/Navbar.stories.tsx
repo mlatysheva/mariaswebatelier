@@ -2,9 +2,9 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import 'app/styles/index.scss';
-import { Navbar } from "./Navbar";
-import { ThemeDecorator } from "../../../shared/config/storybook/ThemeDecorator";
-import { Theme } from "../../../app/providers/ThemeProvider/lib/ThemeContext";
+import { Navbar } from './Navbar';
+import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator';
+import { Theme } from '../../../app/providers/ThemeProvider/lib/ThemeContext';
 
 export default {
   title: 'widgets/Narbar',

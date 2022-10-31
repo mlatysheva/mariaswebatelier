@@ -2,9 +2,9 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import 'app/styles/index.scss';
-import { Theme } from "../../../app/providers/ThemeProvider/lib/ThemeContext";
-import { ThemeDecorator } from "../../../shared/config/storybook/ThemeDecorator";
-import NotFoundPage from "./NotFoundPage";
+import { Theme } from '../../../app/providers/ThemeProvider/lib/ThemeContext';
+import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator';
+import NotFoundPage from './NotFoundPage';
 
 export default {
   title: 'pages/NotFoundPage',

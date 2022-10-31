@@ -2,9 +2,9 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import 'app/styles/index.scss';
-import { Sidebar } from "./Sidebar";
-import { ThemeDecorator } from "../../../../shared/config/storybook/ThemeDecorator";
-import { Theme } from "../../../../app/providers/ThemeProvider/lib/ThemeContext";
+import { Sidebar } from './Sidebar';
+import { ThemeDecorator } from '../../../../shared/config/storybook/ThemeDecorator';
+import { Theme } from '../../../../app/providers/ThemeProvider/lib/ThemeContext';
 
 export default {
   title: 'widgets/Sidebar',
@@ -22,6 +22,3 @@ Light.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-
-

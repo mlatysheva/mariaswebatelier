@@ -1,7 +1,7 @@
-import { Story } from "@storybook/react";
-import { Suspense, useEffect } from "react";
-import { I18nextProvider } from "react-i18next";
-import i18n from "../i18n/i18nStorybook";
+import { Story } from '@storybook/react';
+import { Suspense, useEffect } from 'react';
+import { I18nextProvider, useTranslation } from 'react-i18next';
+import i18n from '../i18n/i18nStorybook';
 
 interface ContextProps {
   globals: {
@@ -10,21 +10,20 @@ interface ContextProps {
 }
 
 export const TranslationDecorator = (context: ContextProps) => (Component: Story) => {
-
-  const {locale} = context.globals;
+  const { locale } = context.globals;
+  const { t } = useTranslation();
 
   console.log(`locale: ${locale}`);
-  
+
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
-  
+
   return (
-    <Suspense fallback="loading">
+    <Suspense fallback={t('loading') as string}>
       <I18nextProvider i18n={i18n}>
         <Component />
       </I18nextProvider>
     </Suspense>
   );
 };
- 

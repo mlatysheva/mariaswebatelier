@@ -3,8 +3,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Spinner } from './Spinner';
 import 'app/styles/index.scss';
-import { ThemeDecorator } from "../../config/storybook/ThemeDecorator";
-import { Theme } from "../../../app/providers/ThemeProvider/lib/ThemeContext";
+import { ThemeDecorator } from '../../config/storybook/ThemeDecorator';
+import { Theme } from '../../../app/providers/ThemeProvider/lib/ThemeContext';
 
 export default {
   title: 'shared/Spinner',

@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Компонент для тестирования ErrorBoundary
@@ -17,6 +16,7 @@ export const BugButton = () => {
 
   return (
     <button
+      type="button"
       onClick={onThrow}
     >
       {t('throw error')}
