@@ -92,6 +92,9 @@
     "webpack-dev-server": "^4.7.4"
   },
   "loki": {
+    "looks-same": {
+      "ignoreCaret": true
+    },
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.docker",
