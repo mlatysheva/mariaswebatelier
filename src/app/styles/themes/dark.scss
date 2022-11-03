@@ -1,4 +1,4 @@
-.app2.dark {
+.app1.dark {
   --bg-color: rgb(33 31 40);
   --inverted-bg-color: rgb(255 255 255);
   --primary-color: orange;
@@ -7,11 +7,56 @@
   --inverted-secondary-color: rgb(143 86 164);
 }
 
+.app2.dark {
+  --bg-color: #18252c;
+  --inverted-bg-color: #659dbd;
+  --primary-color: #fbeec1;
+  --secondary-color: #bc986a;
+  --inverted-primary-color: #daad86;
+  --inverted-secondary-color: #8d8741;
+}
+
+.app3.dark {
+  --bg-color: #2e1114;
+  --inverted-bg-color: #83677b;
+  --primary-color: #fcf8e8;
+  --secondary-color: #64485c;
+  --inverted-primary-color: #adadad;
+  --inverted-secondary-color: #501b1d;
+}
+
+.app4.dark {
+  --bg-color: #131a30;
+  --inverted-bg-color: #4056a1;
+  --primary-color: #efe2ba;
+  --secondary-color: #d79922;
+  --inverted-primary-color: #f13c20;
+  --inverted-secondary-color: #c5cbe3;
+}
+
+.app5.dark {
+  --bg-color: #112d32;
+  --inverted-bg-color: #254e58;
+  --primary-color: #88bdbc;
+  --secondary-color: #6e6658;
+  --inverted-primary-color: #4f4a41;
+  --inverted-secondary-color: #b8fefd;
+}
+
+.app6.dark {
+  --bg-color: #1a191b;
+  --inverted-bg-color: #5d5c61;
+  --primary-color: #b1a296;
+  --secondary-color: #7395ae;
+  --inverted-primary-color: #557a95;
+  --inverted-secondary-color: #8e8d8a;
+}
+
 .app.dark {
-  --bg-color: rgb(33 31 40);
-  --inverted-bg-color: rgb(255 255 255);
-  --primary-color: orange;
-  --secondary-color: rgb(238 202 182);
-  --inverted-primary-color: rgb(33 31 40);
-  --inverted-secondary-color: rgb(143 86 164);
+  --bg-color: #393b2b;
+  --inverted-bg-color: #888e68;
+  --primary-color: #c8c9c7;
+  --secondary-color: #86b3d1;
+  --inverted-primary-color: #552a17;
+  --inverted-secondary-color: #cbbebe;
 }

@@ -1,4 +1,4 @@
-.app.light {
+.app1.light {
   --bg-color: rgb(255 255 255);
   --inverted-bg-color: rgb(33 31 40);
   --primary-color: rgb(33 31 40);
@@ -9,9 +9,54 @@
 
 .app2.light {
   --bg-color: #fbeec1;
-  --inverted-bg-color: #8d8741;
-  --primary-color: #659dbd;
+  --inverted-bg-color: #659dbd;
+  --primary-color: #8d8741;
   --secondary-color: #bc986a;
   --inverted-primary-color: #daad86;
   --inverted-secondary-color: #659dbd;
+}
+
+.app3.light {
+  --bg-color: #fcf8e8;
+  --inverted-bg-color: #83677b;
+  --primary-color: #2e1114;
+  --secondary-color: #501b1d;
+  --inverted-primary-color: #64485c;
+  --inverted-secondary-color: #adadad;
+}
+
+.app4.light {
+  --bg-color: #efe2ba;
+  --inverted-bg-color: #4056a1;
+  --primary-color: #4056a1;
+  --secondary-color: #d79922;
+  --inverted-primary-color: #f13c20;
+  --inverted-secondary-color: #c5cbe3;
+}
+
+.app5.light {
+  --bg-color: #fbfbfb;
+  --inverted-bg-color: #88bdbc;
+  --primary-color: #254e58;
+  --secondary-color: #6e6658;
+  --inverted-primary-color: #112d32;
+  --inverted-secondary-color: #4f4a41;
+}
+
+.app6.light {
+  --bg-color: #fbfbfb;
+  --inverted-bg-color: #b1a296;
+  --primary-color: #5d5c61;
+  --secondary-color: #7395ae;
+  --inverted-primary-color: #557a95;
+  --inverted-secondary-color: #8e8d8a;
+}
+
+.app.light {
+  --bg-color: #fbfbfb;
+  --inverted-bg-color: #888e68;
+  --primary-color: #393b2b;
+  --secondary-color: #86b3d1;
+  --inverted-primary-color: #552a17;
+  --inverted-secondary-color: #cbbebe;
 }
