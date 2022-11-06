@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {
+  ReactNode, useCallback, useRef, useState, useEffect,
+} from 'react';
 import { classNames } from '../../lib/classNames/classNames';
 import cls from './Modal.module.scss';
 
 interface ModalProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
   isOpen?: boolean;
   onClose?: () => void;
 }
+
+const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
   const {
@@ -17,8 +21,50 @@ export const Modal = (props: ModalProps) => {
     onClose,
   } = props;
 
-  const mods: Record<string, boolean> = {
+  /**
+   * @description: isClosing is used to add smooth animation to modal closing
+   * @description: timerRef is used to clear timeout when component is unmounted
+   */
+  const [isClosing, setIsClosing] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+
+  const closeHandler = useCallback(() => {
+    if (onClose) {
+      setIsClosing(true);
+      timerRef.current = setTimeout(() => {
+        onClose();
+        setIsClosing(false);
+      }, ANIMATION_DELAY);
+    }
+  }, [onClose]);
+
+  const onContentClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
   };
+
+  const onKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      closeHandler();
+    }
+  }, [closeHandler]);
+
+  const mods: Record<string, boolean> = {
+    [cls.opened]: isOpen || false,
+    [cls.isClosing]: isClosing,
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      window.addEventListener('keydown', onKeyDown);
+    }
+
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        window.removeEventListener('keydown', onKeyDown);
+      }
+    };
+  }, [isOpen, onKeyDown]);
 
   return (
     <div
@@ -28,8 +74,11 @@ export const Modal = (props: ModalProps) => {
         [className || ''],
       )}
     >
-      <div className={cls.overlay}>
-        <div className={cls.content}>
+      <div className={cls.overlay} onClick={closeHandler}>
+        <div
+          className={classNames(cls.content)}
+          onClick={onContentClick}
+        >
           {children}
         </div>
       </div>
