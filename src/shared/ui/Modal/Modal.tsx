@@ -1,7 +1,9 @@
 import React, {
   ReactNode, useCallback, useRef, useState, useEffect,
 } from 'react';
+import { useTheme } from '../../../app/providers/ThemeProvider';
 import { classNames } from '../../lib/classNames/classNames';
+import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 
 interface ModalProps {
@@ -27,6 +29,7 @@ export const Modal = (props: ModalProps) => {
    */
   const [isClosing, setIsClosing] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const { theme } = useTheme() || {};
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -48,11 +51,6 @@ export const Modal = (props: ModalProps) => {
     }
   }, [closeHandler]);
 
-  const mods: Record<string, boolean> = {
-    [cls.opened]: isOpen || false,
-    [cls.isClosing]: isClosing,
-  };
-
   useEffect(() => {
     if (isOpen) {
       window.addEventListener('keydown', onKeyDown);
@@ -61,27 +59,41 @@ export const Modal = (props: ModalProps) => {
     return () => {
       if (timerRef.current) {
         clearTimeout(timerRef.current);
-        window.removeEventListener('keydown', onKeyDown);
       }
+      window.removeEventListener('keydown', onKeyDown);
     };
   }, [isOpen, onKeyDown]);
 
+  let mods: Record<string, boolean> = {
+    [cls.opened]: isOpen || false,
+    [cls.isClosing]: isClosing,
+  };
+
+  if (theme) {
+    mods = {
+      ...mods,
+      [cls[theme]]: true,
+    };
+  }
+
   return (
-    <div
-      className={classNames(
-        cls.Modal,
-        mods,
-        [className || ''],
-      )}
-    >
-      <div className={cls.overlay} onClick={closeHandler}>
-        <div
-          className={classNames(cls.content)}
-          onClick={onContentClick}
-        >
-          {children}
+    <Portal>
+      <div
+        className={classNames(
+          cls.Modal,
+          mods,
+          [className || ''],
+        )}
+      >
+        <div className={cls.overlay} onClick={closeHandler}>
+          <div
+            className={classNames(cls.content)}
+            onClick={onContentClick}
+          >
+            {children}
+          </div>
         </div>
       </div>
-    </div>
+    </Portal>
   );
 };

@@ -34,13 +34,14 @@
   --inverted-secondary-color: #c5cbe3;
 }
 
-.app5.dark {
+.app.dark {
   --bg-color: #112d32;
   --inverted-bg-color: #254e58;
   --primary-color: #88bdbc;
-  --secondary-color: #6e6658;
-  --inverted-primary-color: #4f4a41;
-  --inverted-secondary-color: #b8fefd;
+  --secondary-color: #4f4a41;
+  --inverted-primary-color: #b8fefd;
+  --inverted-secondary-color:    #a89b86;
+  --accent-color:  #b8fefd;
 }
 
 .app6.dark {
@@ -52,7 +53,7 @@
   --inverted-secondary-color: #8e8d8a;
 }
 
-.app.dark {
+.app7.dark {
   --bg-color: #393b2b;
   --inverted-bg-color: #888e68;
   --primary-color: #c8c9c7;

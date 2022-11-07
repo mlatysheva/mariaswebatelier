@@ -34,13 +34,14 @@
   --inverted-secondary-color: #c5cbe3;
 }
 
-.app5.light {
+.app.light {
   --bg-color: #fbfbfb;
   --inverted-bg-color: #88bdbc;
   --primary-color: #254e58;
-  --secondary-color: #6e6658;
+  --secondary-color: #4f4a41;
   --inverted-primary-color: #112d32;
-  --inverted-secondary-color: #4f4a41;
+  --inverted-secondary-color:   #6e6658;
+  --accent-color:  #b8fefd;
 }
 
 .app6.light {
@@ -52,7 +53,7 @@
   --inverted-secondary-color: #8e8d8a;
 }
 
-.app.light {
+.app7.light {
   --bg-color: #fbfbfb;
   --inverted-bg-color: #888e68;
   --primary-color: #393b2b;

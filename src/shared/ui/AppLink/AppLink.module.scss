@@ -1,10 +1,10 @@
 .AppLink {
-  color: var(--primary-color);
+  color: var(--inverted-secondary-color);
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    color: var(--inverted-secondary-color);
+    color: var(--accent-color);
   }
 
   &:active {
@@ -13,9 +13,9 @@
 }
 
 .primary {
-  color: var(--primary-color);
+  color: var(--inverted-primary-color);
 }
 
 .secondary {
-  color: var(--inverted-primary-color);
+  color: var(--inverted-secondary-color);
 }
