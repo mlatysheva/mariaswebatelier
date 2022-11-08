@@ -11,5 +11,6 @@
   "goHome": "Go to home page",
   "reloadPage": "Reload page",
   "throw error": "Throw error",
-  "loading": "Loading"
+  "loading": "Loading",
+  "login": "Login"
 }

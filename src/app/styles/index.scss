@@ -6,9 +6,6 @@
 body {
   font: var(--font-m);
   color: var(--primary-color);
-  
-
-  // min-height: 100vh;
   height: 100vh;
 }
 
@@ -23,7 +20,9 @@ body {
 }
 
 .page-wrapper {
-  flex-grow: 1;
+  width: calc(100% - var(--sidebar-width));
+
+  // flex-grow: 1;
   padding: 20px;
 }
 

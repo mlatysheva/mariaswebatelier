@@ -11,10 +11,12 @@ interface ContextProps {
 
 export const TranslationDecorator = (context: ContextProps) => (Component: Story) => {
   const { locale } = context.globals;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = useTranslation();
 
   console.log(`locale: ${locale}`);
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);

@@ -11,18 +11,17 @@
   padding: 0;
   border: none;
   background: transparent;
-  color: var(--inverted-secondary-color);
+  color: var(--primary-color);
   outline: none;
 }
 
 .clear:hover {
   background: transparent;
-  color: var(--accent-color);
 }
 
 .theme-button {
   margin-bottom: 20px;
-  // filter: invert(100%) sepia(27%) saturate(1063%) hue-rotate(293deg) brightness(82%) contrast(91%);
+  filter: invert(100%) sepia(27%) saturate(1063%) hue-rotate(293deg) brightness(82%) contrast(91%);
 }
 
 .outline {
