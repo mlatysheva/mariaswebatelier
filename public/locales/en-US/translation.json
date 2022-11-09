@@ -12,5 +12,7 @@
   "reloadPage": "Reload page",
   "throw error": "Throw error",
   "loading": "Loading",
-  "login": "Login"
+  "login": "Login",
+  "increment": "Increment",
+  "decrement": "Decrement"
 }

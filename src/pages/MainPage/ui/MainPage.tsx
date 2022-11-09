@@ -3,6 +3,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BugButton } from '../../../app/providers/ErrorBoundary/ui/BugButton';
+import { Counter } from '../../../entities/Counter';
 
 const MainPage = () => {
   const { t } = useTranslation();
@@ -11,6 +12,7 @@ const MainPage = () => {
     <div>
       <BugButton />
       <h1 className="hero-text">{t('home')}</h1>
+      <Counter />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cupiditate ratione adipisci velit eum eaque saepe nesciunt, officiis deleniti! Velit est nobis eveniet numquam nam beatae adipisci dicta amet nostrum.</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cupiditate ratione adipisci velit eum eaque saepe nesciunt, officiis deleniti! Velit est nobis eveniet numquam nam beatae adipisci dicta amet nostrum.</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cupiditate ratione adipisci velit eum eaque saepe nesciunt, officiis deleniti! Velit est nobis eveniet numquam nam beatae adipisci dicta amet nostrum.</p>

@@ -1,7 +1,9 @@
 {
   "about": "About",
+  "decrement": "",
   "goHome": "Go Home",
   "home": "Home",
+  "increment": "",
   "language": "English",
   "login": "",
   "notFound": "Page not found",

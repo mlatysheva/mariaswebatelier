@@ -1,7 +1,9 @@
 {
   "about": "О нас",
+  "decrement": "",
   "goHome": "на Главную",
   "home": "Главная",
+  "increment": "",
   "language": "Русский",
   "login": "",
   "notFound": "Страница не найдена",
