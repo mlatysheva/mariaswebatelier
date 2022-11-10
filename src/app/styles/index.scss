@@ -3,16 +3,24 @@
 @import "themes/dark";
 @import "themes/light";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   font: var(--font-m);
-  color: var(--primary-color);
-  height: 100vh;
 }
 
 .app {
   background: var(--bg-color);
   color: var(--primary-color);
-  min-width: 100vh;
+  min-height: 100vh;
+}
+
+.app_modal {
+  color: var(--primary-color);
+  font: var(--font-m);
 }
 
 .content-page {
