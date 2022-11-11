@@ -1,6 +1,9 @@
 {
   "about": "О нас",
   "decrement": "",
+  "enter_name": "",
+  "enter_password": "",
+  "enter_text": "",
   "goHome": "на Главную",
   "home": "Главная",
   "increment": "",

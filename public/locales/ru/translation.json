@@ -14,5 +14,8 @@
   "loading": "Идет загрузка",
   "login": "Войти",
   "increment": "Увеличить",
-  "decrement": "Уменьшить"
+  "decrement": "Уменьшить",
+  "enter_text": "Введите текст",
+  "enter_name": "Введите имя пользователя",
+  "enter_password": "Введите пароль"
 }

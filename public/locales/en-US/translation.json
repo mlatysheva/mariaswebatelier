@@ -14,5 +14,8 @@
   "loading": "Loading",
   "login": "Login",
   "increment": "Increment",
-  "decrement": "Decrement"
+  "decrement": "Decrement",
+  "enter_text": "Enter text",
+  "enter_name": "Enter username",
+  "enter_password": "Enter password"
 }

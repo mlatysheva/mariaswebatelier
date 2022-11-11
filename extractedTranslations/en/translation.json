@@ -1,6 +1,9 @@
 {
   "about": "About",
   "decrement": "",
+  "enter_name": "",
+  "enter_password": "",
+  "enter_text": "",
   "goHome": "Go Home",
   "home": "Home",
   "increment": "",
