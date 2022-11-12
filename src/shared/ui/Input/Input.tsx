@@ -1,4 +1,3 @@
-import { ReadonlyActionMatcherDescriptionCollection } from '@reduxjs/toolkit/dist/createReducer';
 import React, {
   InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
@@ -25,10 +24,9 @@ export const Input = memo((props: InputProps) => {
     ...other
   } = props;
 
-  const caretStartPosition = 0;
   const [isFocused, setIsFocused] = useState(false);
-  const [caretPosition, setCaretPosition] = useState(caretStartPosition);
-  const ref = useRef<HTMLInputElement>();
+  const [caretPosition, setCaretPosition] = useState(0);
+  const ref = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (autofocus) {
@@ -51,19 +49,19 @@ export const Input = memo((props: InputProps) => {
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value);
-    setCaretPosition(e.target.value.length + caretStartPosition);
+    setCaretPosition(e.target.value.length);
   };
 
   return (
     <div className={classNames(cls.InputWrapper, {}, [className || ''])}>
       {placeholder && (
         <div className={cls.placeholder}>
-          {`${placeholder} >`}
+          {`${placeholder}>`}
         </div>
       )}
       <div className={cls.caretWrapper}>
         <input
-          // ref={ref}
+          ref={ref}
           type={type}
           value={value}
           onChange={onChangeHandler}
