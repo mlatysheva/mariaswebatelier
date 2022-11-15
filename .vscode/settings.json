@@ -1,3 +1,8 @@
 {
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "i18n-ally.localesPaths": [
+    "storybook-static/locales",
+    "public/locales",
+    "src/shared/config/i18n"
+  ]
 }
