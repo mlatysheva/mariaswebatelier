@@ -17,5 +17,8 @@
   "decrement": "Уменьшить",
   "enter_text": "Введите текст",
   "enter_name": "Введите имя пользователя",
-  "enter_password": "Введите пароль"
+  "enter_password": "Введите пароль",
+  "authorisation_form": "Форма авторизации",
+  "incorrect_login_error": "Неправильный логин или пароль",
+  "logout": "Выйти"
 }

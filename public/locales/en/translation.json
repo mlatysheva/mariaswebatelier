@@ -17,5 +17,8 @@
   "decrement": "Decrement",
   "enter_text": "Enter text",
   "enter_name": "Enter username",
-  "enter_password": "Enter password"
+  "enter_password": "\"Enter password\"",
+  "authorisation_form": "Authorisation form",
+  "incorrect_login_error": "Incorrect username or password",
+  "logout": "Logout"
 }

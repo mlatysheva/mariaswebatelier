@@ -3,7 +3,7 @@ import { Counter } from './ui/Counter';
 import type { CounterSchema } from './model/types/counterSchema';
 
 export {
-  Counter,
   counterReducer,
+  Counter,
   CounterSchema,
 };

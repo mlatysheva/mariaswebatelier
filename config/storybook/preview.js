@@ -25,7 +25,7 @@ export const globalTypes = {
     toolbar: {
       icon: 'globe',
       items: [
-        { value: 'en-US', title: 'English' },
+        { value: 'en', title: 'English' },
         { value: 'ru', title: 'Russian' },
       ],
       title: 'Locale',
