@@ -17,17 +17,17 @@ const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args
 export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [StoreDecorator({
-  login: { username: 'admin', password: '123' },
+  loginForm: { username: 'admin', password: '123' },
 })];
 
 export const WithError = Template.bind({});
 WithError.args = {};
 WithError.decorators = [StoreDecorator({
-  login: { username: '123', password: 'wer', error: 'Incorrect login data' },
+  loginForm: { username: '123', password: 'wer', error: 'Incorrect login data' },
 })];
 
 export const Loading = Template.bind({});
 Loading.args = {};
 Loading.decorators = [StoreDecorator({
-  login: { username: '', password: '', isLoading: true },
+  loginForm: { username: '', password: '', isLoading: true },
 })];
