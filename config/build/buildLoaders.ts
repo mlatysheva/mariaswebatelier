@@ -15,16 +15,15 @@ export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
       loader: 'babel-loader',
       options: {
         presets: ['@babel/preset-env'],
-        plugins: [
-          [
-            'i18next-extract',
-            {
-              locales: ['en', 'ru'],
-              // keyAsDefaultValue: ['en'],
-              keyAsDefaultValue: false
-            }
-          ]
-        ]
+        // plugins: [
+        //   [
+        //     'i18next-extract',
+        //     {
+        //       locales: ['en', 'ru'],
+        //       keyAsDefaultValue: false
+        //     }
+        //   ]
+        // ]
       }
     }
   }
