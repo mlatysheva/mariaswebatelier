@@ -13,6 +13,7 @@
   "login": "",
   "logout": "",
   "notFound": "Page not found",
+  "profile": "",
   "reloadPage": "Reload page",
   "throw error": "Throw error",
   "toggle": "Toggle",

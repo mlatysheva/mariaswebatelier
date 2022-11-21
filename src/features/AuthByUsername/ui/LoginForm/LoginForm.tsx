@@ -13,18 +13,20 @@ import { getLoginUsername } from '../../model/selectors/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading';
 import { getLoginError } from '../../model/selectors/getLoginError';
+import { useAppDispatch } from '../../../../shared/lib/hooks/useAppDispatch';
 
 export interface LoginFormProps {
   className?: string;
+  onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
   loginForm: loginReducer,
 };
 
-const LoginForm = memo(({ className }: LoginFormProps) => {
+const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
   const { t } = useTranslation();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const username = useSelector(getLoginUsername);
   const password = useSelector(getLoginPassword);
   const isLoading = useSelector(getLoginIsLoading);
@@ -38,11 +40,14 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
     dispatch(loginActions.setPassword(value));
   }, [dispatch]);
 
-  const onLoginClick = useCallback(() => {
+  const onLoginClick = useCallback(async () => {
     if (username && password) {
-      dispatch(loginByUsername({ username, password }));
+      const result = await dispatch(loginByUsername({ username, password }));
+      if (result.meta.requestStatus === 'fulfilled') {
+        onSuccess();
+      }
     }
-  }, [dispatch, password, username]);
+  }, [dispatch, onSuccess, password, username]);
 
   return (
     // eslint-disable-next-line i18next/no-literal-string

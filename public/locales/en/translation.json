@@ -20,5 +20,6 @@
   "enter_password": "\"Enter password\"",
   "authorisation_form": "Authorisation form",
   "incorrect_login_error": "Incorrect username or password",
-  "logout": "Logout"
+  "logout": "Logout",
+  "profile": "Profile"
 }
