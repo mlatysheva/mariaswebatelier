@@ -6,7 +6,11 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({
+  paths,
+  isDev,
+  apiUrl,
+}: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugins = [
     new HtmlWebpackPlugin({
       template: paths.html,
@@ -18,6 +22,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
+      __API__: JSON.stringify(apiUrl),
     }),
     new CopyWebpackPlugin({
       patterns: [
