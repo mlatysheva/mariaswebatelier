@@ -7,6 +7,10 @@
   height: 40px;
 }
 
+.Button:hover {
+  color: var(--inverted-secondary-color);
+}
+
 .clear {
   padding: 0;
   border: none;

@@ -6,29 +6,19 @@ import { userActions } from 'entities/User/model/slice/userSlice';
 import { USER_LOCALSTORAGE_KEY } from 'shared/constants/localStorage';
 import { BaseThunkAPI } from '@reduxjs/toolkit/dist/createAsyncThunk';
 import { ThunkConfig } from 'app/providers/StoreProvider';
+import { Profile } from '../../types/profile';
 
-interface LoginByUsernameProps {
-  username: string;
-  password: string;
-}
-
-export const loginByUsername = createAsyncThunk<
-    User,
-    LoginByUsernameProps,
+export const fetchProfileData = createAsyncThunk<
+    Profile,
+    void,
     ThunkConfig<string>
 >(
-  'login/loginByUsername',
-  async (authData, thunkApi) => {
-    const { extra, dispatch, rejectWithValue } = thunkApi;
+  'profile/fetchProfileData',
+  async (_, thunkApi) => {
+    const { extra, rejectWithValue } = thunkApi;
     try {
-      const response = await extra.api.post<User>('/login', authData);
+      const response = await extra.api.get<Profile>('/profile');
 
-      if (!response.data) {
-        throw new Error();
-      }
-
-      localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
-      dispatch(userActions.setAuthData(response.data));
       return response.data;
     } catch (e) {
       console.log(e);
