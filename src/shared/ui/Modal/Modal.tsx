@@ -1,8 +1,8 @@
 import React, {
-  ReactNode, useCallback, useRef, useState, useEffect,
+  ReactNode, useCallback, useRef, useState, useEffect, MutableRefObject,
 } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 
@@ -30,7 +30,7 @@ export const Modal = (props: ModalProps) => {
    * @description: timerRef is used to clear timeout when component is unmounted
    */
   const [isClosing, setIsClosing] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
   const { theme } = useTheme() || {};
   const [isMounted, setIsMounted] = useState(false);
 
@@ -66,14 +66,12 @@ export const Modal = (props: ModalProps) => {
     }
 
     return () => {
-      if (timerRef.current) {
-        clearTimeout(timerRef.current);
-      }
+      clearTimeout(timerRef.current);
       window.removeEventListener('keydown', onKeyDown);
     };
   }, [isOpen, onKeyDown]);
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [cls.opened]: isOpen || false,
     [cls.isClosing]: isClosing,
   };

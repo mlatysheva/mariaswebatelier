@@ -1,6 +1,6 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
@@ -41,11 +41,9 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
   }, [dispatch]);
 
   const onLoginClick = useCallback(async () => {
-    if (username && password) {
-      const result = await dispatch(loginByUsername({ username, password }));
-      if (result.meta.requestStatus === 'fulfilled') {
-        onSuccess();
-      }
+    const result = await dispatch(loginByUsername({ username, password }));
+    if (result.meta.requestStatus === 'fulfilled') {
+      onSuccess();
     }
   }, [dispatch, onSuccess, password, username]);
 

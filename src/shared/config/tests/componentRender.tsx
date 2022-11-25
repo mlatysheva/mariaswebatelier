@@ -4,7 +4,6 @@ import { I18nextProvider } from 'react-i18next';
 import { MemoryRouter } from 'react-router-dom';
 import i18n from 'shared/config/i18n/i18nForTests';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { DeepPartial } from '@reduxjs/toolkit';
 import { ErrorBoundary } from '../../../app/providers/ErrorBoundary';
 
 export interface componentRenderOptions {

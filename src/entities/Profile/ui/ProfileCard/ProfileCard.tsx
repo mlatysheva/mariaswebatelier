@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from '../../../../shared/ui/Input/Input';
 import { getProfileData } from '../../model/selectors/getProfileData';
 import { getProfileError } from '../../model/selectors/getProfileError';
@@ -24,7 +24,7 @@ export const ProfileCard = ({ className }:ProfileCardProps) => {
     <div className={classNames(cls.ProfileCard, {}, [className])}>
       <div className={cls.header}>
         <Text
-          className="hero-text"
+          theme={TextTheme.HERO}
           title={t('profile')}
         />
         <Button

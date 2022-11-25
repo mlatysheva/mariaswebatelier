@@ -17,3 +17,14 @@
     color: var(--red-dark);
   }
 }
+
+.hero {
+  .title {
+    font-size: var(--hero-text-size);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 7px;
+    margin-bottom: 20px;
+    font-family: var(--hero-text-font);
+  }
+}

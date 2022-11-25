@@ -1,5 +1,4 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { DeepPartial } from 'app/types/deepPartial';
 import { getLoginIsLoading } from './getLoginIsLoading';
 
 describe('getLoginIsLoading.test', () => {

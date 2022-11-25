@@ -1,10 +1,7 @@
-import { AsyncThunk, createAsyncThunk, ThunkAction } from '@reduxjs/toolkit';
-import axios from 'axios';
-import i18n from 'shared/config/i18n/i18n';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import { User } from 'entities/User';
 import { userActions } from 'entities/User/model/slice/userSlice';
 import { USER_LOCALSTORAGE_KEY } from 'shared/constants/localStorage';
-import { BaseThunkAPI } from '@reduxjs/toolkit/dist/createAsyncThunk';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 
 interface LoginByUsernameProps {

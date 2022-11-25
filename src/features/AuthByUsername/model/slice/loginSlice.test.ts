@@ -1,4 +1,3 @@
-import { DeepPartial } from 'app/types/deepPartial';
 import { LoginSchema } from '../types/loginSchema';
 import { loginActions, loginReducer } from './loginSlice';
 
