@@ -19,3 +19,4 @@ export {
 export { getProfileData } from './model/selectors/getProfileData';
 export { getProfileError } from './model/selectors/getProfileError';
 export { getProfileIsLoading } from './model/selectors/getProfileIsLoading';
+export { getProfileReadonly } from './model/selectors/getProfileReadonly';

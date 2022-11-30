@@ -4,5 +4,6 @@
   "your_lastname": "Your last name",
   "profile": "Profile",
   "profile_loading_error": "Error has occurred while loading the profile",
-  "reload_page": "Try reloading the page"
+  "reload_page": "Try reloading the page",
+  "cancel": "Cancel"
 }
