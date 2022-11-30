@@ -26,7 +26,8 @@
   background-color: var(--bg-color);
   transition: 0.3s transform;
   transform: scale(0.5);
-  max-width: 60%;
+  width: 500px;
+  max-width: 90%;
 }
 
 .opened {

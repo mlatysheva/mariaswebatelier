@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
+import { profileActions } from '../../slice/ProfileSlice';
 import { Profile } from '../../types/profile';
 
 export const fetchProfileData = createAsyncThunk<
@@ -9,7 +10,7 @@ export const fetchProfileData = createAsyncThunk<
 >(
   'profile/fetchProfileData',
   async (_, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
+    const { extra, dispatch, rejectWithValue } = thunkApi;
     try {
       const response = await extra.api.get<Profile>('/profile');
 

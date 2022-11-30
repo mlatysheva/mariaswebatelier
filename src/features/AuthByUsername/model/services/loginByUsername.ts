@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { User } from 'entities/User';
-import { userActions } from 'entities/User/model/slice/userSlice';
+import { User, userActions } from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/constants/localStorage';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import { useTranslation } from 'react-i18next';
@@ -21,6 +20,7 @@ export const loginByUsername = createAsyncThunk<
     // const { t } = useTranslation();
     try {
       const response = await extra.api.post<User>('/login', authData);
+      console.dir(response);
 
       if (!response.data) {
         throw new Error();
