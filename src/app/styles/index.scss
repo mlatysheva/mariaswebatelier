@@ -29,8 +29,9 @@ body {
 
 .page-wrapper {
   width: calc(100% - var(--sidebar-width));
-  margin-left: 30px;
-  padding: 20px;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  padding: 1.5rem;
 }
 
 .hero-text {

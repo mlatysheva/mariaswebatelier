@@ -3,6 +3,7 @@ import { User } from 'entities/User';
 import { userActions } from 'entities/User/model/slice/userSlice';
 import { USER_LOCALSTORAGE_KEY } from 'shared/constants/localStorage';
 import { ThunkConfig } from 'app/providers/StoreProvider';
+import { useTranslation } from 'react-i18next';
 
 interface LoginByUsernameProps {
   username: string;
@@ -17,6 +18,7 @@ export const loginByUsername = createAsyncThunk<
   'login/loginByUsername',
   async (authData, thunkApi) => {
     const { extra, dispatch, rejectWithValue } = thunkApi;
+    // const { t } = useTranslation();
     try {
       const response = await extra.api.post<User>('/login', authData);
 
@@ -29,7 +31,8 @@ export const loginByUsername = createAsyncThunk<
       return response.data;
     } catch (e) {
       console.log(e);
-      return rejectWithValue('incorrect_login_error');
+      // return rejectWithValue(t('incorrect_login_error'));
+      return rejectWithValue('Incorrect login or password');
     }
   },
 );
