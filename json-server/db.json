@@ -27,12 +27,12 @@
   ],
   "profile": {
     "firstname": "Maria",
-    "lastname": "Perabo",
+    "lastname": "Latysheva",
     "age": 45,
-    "currency": "EUR",
-    "country": "Spain",
     "city": "Madrid",
-    "username": "admin",
-    "avatar": "https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/female/10.png"   
+    "currency": "RUB",
+    "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+    "username": "latysma",
+    "country": "Russia"
   }
 }

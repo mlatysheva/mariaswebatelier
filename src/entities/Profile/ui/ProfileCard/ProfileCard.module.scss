@@ -1,11 +1,10 @@
 .ProfileCard {
-  margin-top: 2rem;
   padding: 2rem;
   border: 2px solid var(--inverted-bg-color);
 }
 
 .input {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .loading,
@@ -14,4 +13,8 @@
   align-items: center;
   justify-content: center;
   height: 300px;
+}
+
+.editing {
+  border: 2px solid var(--inverted-secondary-color);
 }

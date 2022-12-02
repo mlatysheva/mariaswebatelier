@@ -1,6 +1,15 @@
 {
+  "cancel": "",
   "edit": "",
+  "enter_avatar": "",
+  "enter_username": "",
+  "indicate_currency": "",
   "profile": "",
+  "profile_loading_error": "",
+  "reload_page": "",
+  "save": "",
+  "your_age": "",
+  "your_city": "",
   "your_lastname": "",
   "your_name": ""
 }

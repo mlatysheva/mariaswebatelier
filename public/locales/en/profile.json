@@ -5,5 +5,12 @@
   "profile": "Profile",
   "profile_loading_error": "Error has occurred while loading the profile",
   "reload_page": "Try reloading the page",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "save": "Save",
+  "your_age": "Your age",
+  "your_city": "Your city",
+  "enter_username": "Enter your username",
+  "enter_avatar": "Enter link to your avatar",
+  "indicate_currency": "Indicate currency",
+  "indicate_country": "Indicate country"
 }
