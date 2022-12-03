@@ -12,5 +12,12 @@
   "enter_username": "Enter your username",
   "enter_avatar": "Enter link to your avatar",
   "indicate_currency": "Indicate currency",
-  "indicate_country": "Indicate country"
+  "indicate_country": "Indicate country",
+  "incorrect_age": "Enter correct age",
+  "incorrect_age_range": "Age must be within 16-90 years",
+  "incorrect_country": "Select country from the list",
+  "incorrect_name_length": "First and last names must be at least 2 characters long",
+  "incorrect_name": "Enter first and last names",
+  "no_data": "Please fill in all the fields",
+  "server_error": "Server error has occurred while saving the profile"
 }
