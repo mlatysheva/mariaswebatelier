@@ -2,6 +2,7 @@
 @import "variables/global";
 @import "themes/dark";
 @import "themes/light";
+@import "themes/vintage";
 
 * {
   box-sizing: border-box;
@@ -39,8 +40,6 @@ body {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 7px;
-
-  // margin-bottom: 20px;
   margin-top: 2rem;
   font-family: var(--hero-text-font);
 }
