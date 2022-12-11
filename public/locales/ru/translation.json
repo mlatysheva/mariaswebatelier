@@ -21,5 +21,7 @@
   "authorisation_form": "Форма авторизации",
   "incorrect_login_error": "Неправильный логин или пароль",
   "logout": "Выйти",
-  "profile": "Профиль"
+  "profile": "Профиль",
+  "article_details": "Статья",
+  "articles": "Статьи"
 }

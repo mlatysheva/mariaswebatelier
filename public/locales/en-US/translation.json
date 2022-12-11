@@ -21,5 +21,7 @@
   "authorisation_form": "Authorisation form",
   "incorrect_login_error": "Incorrect username or password",
   "logout": "Logout",
-  "profile": "Profile"
+  "profile": "Profile",
+  "article_details": "Article",
+  "articles": "Articles"
 }
