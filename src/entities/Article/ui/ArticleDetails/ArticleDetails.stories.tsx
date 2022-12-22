@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import 'app/styles/index.scss';
 import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
-import ArticleDetails from './ArticleDetails';
+import { ArticleDetails } from './ArticleDetails';
 
 export default {
   title: 'entities/ArticleDetails',
@@ -12,7 +12,9 @@ export default {
   },
 } as ComponentMeta<typeof ArticleDetails>;
 
-const Template: ComponentStory<typeof ArticleDetails> = () => <ArticleDetails />;
+const Template: ComponentStory<typeof ArticleDetails> = () => (
+  <ArticleDetails id="1" />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

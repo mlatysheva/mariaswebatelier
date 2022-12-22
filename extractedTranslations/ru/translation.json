@@ -1,6 +1,7 @@
 {
   "about": "О нас",
   "article_details": "",
+  "article_not_found": "",
   "articles": "",
   "authorisation_form": "",
   "cancel": "",
@@ -11,6 +12,7 @@
   "enter_password": "",
   "enter_text": "",
   "enter_username": "",
+  "error_loading_article": "",
   "goHome": "на Главную",
   "home": "Главная",
   "incorrect_age": "",
