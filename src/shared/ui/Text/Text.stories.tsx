@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 import 'app/styles/index.scss';
 import { ThemeDecorator } from '../../config/storybook/ThemeDecorator';
 import { Theme } from '../../../app/providers/ThemeProvider/lib/ThemeContext';
@@ -56,4 +56,11 @@ Error.args = {
   title: 'Title',
   text: 'Description for the text component',
   theme: TextTheme.ERROR,
+};
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+  title: 'Title',
+  text: 'Description for the text component',
+  size: TextSize.L,
 };

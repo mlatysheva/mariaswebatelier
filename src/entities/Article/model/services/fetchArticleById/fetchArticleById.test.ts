@@ -1,18 +1,6 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import 'app/styles/index.scss';
-import { Article, ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
-import ArticleDetailsPage from './ArticleDetailsPage';
-
-export default {
-  title: 'pages/ArticleDetailsPage',
-  component: ArticleDetailsPage,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as ComponentMeta<typeof ArticleDetailsPage>;
-
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
+import { TestAsyncThunk } from 'shared/lib/TestAsyncThunk/TestAsyncThunk';
+import { fetchArticleById } from './fetchArticleById';
+import { Article, ArticleBlockType, ArticleType } from '../../types/article';
 
 const article: Article = {
   id: '1',
@@ -56,10 +44,23 @@ const article: Article = {
   ],
 };
 
-export const Normal = Template.bind({});
-Normal.args = {};
-Normal.decorators = [StoreDecorator({
-  articleDetails: {
-    data: article,
-  },
-})];
+describe('fetchArticleById test', () => {
+  test('should fetch article successfully', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById);
+    thunk.api.get.mockReturnValue(Promise.resolve({ data: article }));
+    const result = await thunk.callThunk('fulfilled');
+
+    expect(thunk.api.get).toHaveBeenCalled();
+    expect(result.meta.requestStatus).toBe('fulfilled');
+    expect(result.payload).toEqual(article);
+  });
+
+  test('should return article fetch error', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById);
+    thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
+    const result = await thunk.callThunk('rejected');
+
+    expect(thunk.api.get).toHaveBeenCalled();
+    expect(result.meta.requestStatus).toBe('rejected');
+  });
+});

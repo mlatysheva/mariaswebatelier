@@ -5,10 +5,11 @@
   background-color: var(--inverted-secondary-color);
   border: none;
   height: 40px;
-}
 
-.Button:hover {
-  color: var(--inverted-secondary-color);
+  &:hover {
+    color: var(--inverted-secondary-color);
+    stroke-opacity: 0.7;
+  }
 }
 
 .clear {
@@ -25,7 +26,6 @@
 
 .theme-button {
   margin-bottom: 20px;
-  filter: invert(100%) sepia(27%) saturate(1063%) hue-rotate(293deg) brightness(82%) contrast(91%);
 }
 
 .outline {
