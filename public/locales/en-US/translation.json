@@ -23,5 +23,7 @@
   "logout": "Logout",
   "profile": "Profile",
   "article_details": "Article",
-  "articles": "Articles"
+  "articles": "Articles",
+  "comments": "Comments",
+  "no_comments": "There are no comments"
 }

@@ -3,5 +3,6 @@
   "articles": "Articles",
   "article_not_found": "Article not found",
   "error_loading_article": "Error occurred while loading the article",
-  "copy": "Copy"
+  "copy": "Copy",
+  "comments": "Comments"
 }

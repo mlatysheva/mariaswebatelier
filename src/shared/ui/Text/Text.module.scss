@@ -1,11 +1,13 @@
 .title {
   color: var(--primary-color);
-  line-height: 150%;
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 
 .text {
   color: var(--secondary-color);
-  line-height: 150%;
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 
 .error {

@@ -23,5 +23,7 @@
   "logout": "Выйти",
   "profile": "Профиль",
   "article_details": "Статья",
-  "articles": "Статьи"
+  "articles": "Статьи",
+  "comments": "Комментарии",
+  "no_comments": "Комментарии отсутствуют"
 }
