@@ -14,8 +14,9 @@
 
 .copyIcon path {
   stroke: var(--inverted-primary-color);
+  stroke-opacity: 0.6;
 }
 
 .copyIcon:hover path {
-  stroke: var(--inverted-secondary-color);
+  stroke-opacity: 1;
 }
