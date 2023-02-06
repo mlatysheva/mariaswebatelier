@@ -25,5 +25,7 @@
   "article_details": "Article",
   "articles": "Articles",
   "comments": "Comments",
-  "no_comments": "There are no comments"
+  "no_comments": "There are no comments",
+  "add_comment": "Add comment",
+  "send": "Send"
 }

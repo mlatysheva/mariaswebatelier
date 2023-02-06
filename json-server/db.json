@@ -118,14 +118,28 @@
       "avatar": "https://www.shutterstock.com/image-photo/young-professional-female-hacker-using-600w-651477679.jpg"
     }
   ],
-  "profile": {
-    "firstname": "Maria",
-    "lastname": "Latysheva",
-    "age": 44,
-    "city": "Madrid",
-    "currency": "RUB",
-    "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-    "username": "latysma",
-    "country": "Russia"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Maria",
+      "lastname": "Latysheva",
+      "age": 45,
+      "city": "Madrid",
+      "currency": "RUB",
+      "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+      "username": "latysma",
+      "country": "Russia"
+    },
+    {
+      "id": "2",
+      "firstname": "Yury",
+      "lastname": "Nikulin",
+      "age": 50,
+      "city": "Munich",
+      "currency": "EUR",
+      "avatar": "https://www.shutterstock.com/image-photo/young-professional-female-hacker-using-600w-651477679.jpg",
+      "username": "nikulyu",
+      "country": "Russia"
+    }
+  ]
 }
