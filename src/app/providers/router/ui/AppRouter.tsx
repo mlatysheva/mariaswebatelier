@@ -1,10 +1,8 @@
 import {
-  memo, Suspense, useCallback, useMemo,
+  memo, Suspense, useCallback,
 } from 'react';
-import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';
-import { getUserAuthData } from 'entities/User';
 import { AppRoutesProps, routeConfig } from 'shared/config/routerConfig/routerConfig';
 import { RequireAuth } from './RequireAuth';
 

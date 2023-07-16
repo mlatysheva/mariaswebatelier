@@ -1,5 +1,6 @@
 {
   "about": "About",
+  "add_comment": "",
   "article_details": "",
   "article_not_found": "",
   "articles": "",
@@ -37,6 +38,7 @@
   "reloadPage": "Reload page",
   "reload_page": "",
   "save": "",
+  "send": "",
   "server_error": "",
   "throw error": "Throw error",
   "toggle": "Toggle",

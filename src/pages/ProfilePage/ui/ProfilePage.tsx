@@ -1,8 +1,9 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader';
 import {
   fetchProfileData,
+  getProfileData,
   getProfileError,
   getProfileForm,
   getProfileIsLoading,
@@ -21,6 +22,7 @@ import { Currency } from '../../../entities/Currency';
 import { Country } from '../../../entities/Country';
 import { Text, TextTheme } from '../../../shared/ui/Text/Text';
 import { useInitialEffect } from '../../../shared/lib/hooks/useInitialEffect';
+import { getUserAuthData } from '../../../entities/User';
 
 const reducers: ReducersList = {
   profile: profileReducer,
@@ -38,7 +40,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   const isLoading = useSelector(getProfileIsLoading);
   const readonly = useSelector(getProfileReadonly);
   const validateErrors = useSelector(getValidateProfileErrors);
-  const { id } = useParams<{ id: string }>();
+  // const { id } = useParams<{ id: string }>();
+  const userData = useSelector(getUserAuthData);
+  const id = userData?.id;
 
   const validateErrorTranslations = {
     [ValidateProfileError.INCORRECT_AGE]: t('incorrect_age'),

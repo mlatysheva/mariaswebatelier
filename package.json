@@ -2,6 +2,7 @@
   "name": "maria-webatelier",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://mlatysheva.github.io/mariaswebatelier/",
   "scripts": {
     "start": "webpack serve --env port=3000",
     "start:dev:server": "node ./json-server/index.js",
@@ -24,7 +25,8 @@
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "gh-pages -d build --message 'deploy: mariaswebatelier to GitHub Pages'"
   },
   "keywords": [],
   "author": "",
@@ -84,6 +86,7 @@
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",

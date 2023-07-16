@@ -20,12 +20,14 @@ export enum AppRoutes {
   NOT_FOUND = 'notFound',
 }
 
+export const BASE_URL = 'mariaswebatelier';
+
 export const RoutePath: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]: '/',
-  [AppRoutes.ABOUT]: '/about',
-  [AppRoutes.PROFILE]: '/profile/', // + :id
-  [AppRoutes.ARTICLES]: '/articles',
-  [AppRoutes.ARTICLE_DETAILS]: '/articles/', // + :id
+  [AppRoutes.MAIN]: `${BASE_URL}/`,
+  [AppRoutes.ABOUT]: `${BASE_URL}/about`,
+  [AppRoutes.PROFILE]: `${BASE_URL}/profile`, // + :id
+  [AppRoutes.ARTICLES]: `${BASE_URL}/articles`,
+  [AppRoutes.ARTICLE_DETAILS]: `${BASE_URL}/articles/`, // + :id
 
   [AppRoutes.NOT_FOUND]: '*',
 };
@@ -40,7 +42,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     element: <AboutPage />,
   },
   [AppRoutes.PROFILE]: {
-    path: `${RoutePath.profile}:id`,
+    path: `${RoutePath.profile}`,
     element: <ProfilePage />,
     authOnly: true,
   },
