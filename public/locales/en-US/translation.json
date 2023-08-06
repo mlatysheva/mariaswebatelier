@@ -25,5 +25,6 @@
   "article_details": "Article",
   "articles": "Articles",
   "comments": "Comments",
-  "no_comments": "There are no comments"
+  "no_comments": "There are no comments",
+  "incorrect_comment": "Missing user data, comment or article"
 }

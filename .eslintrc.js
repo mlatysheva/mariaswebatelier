@@ -59,6 +59,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-unused-vars': 'off',
     'no-undef': 'off',
+    "react/jsx-props-no-spreading": "off",
   },
   globals: {
     __IS_DEV__: true,

@@ -1,5 +1,6 @@
 {
   "about": "О нас",
+  "add_comment": "",
   "article_details": "",
   "article_not_found": "",
   "articles": "",
@@ -19,6 +20,7 @@
   "home": "Главная",
   "incorrect_age": "",
   "incorrect_age_range": "",
+  "incorrect_comment": "",
   "incorrect_country": "",
   "incorrect_login_error": "Неправильный логин или пароль",
   "incorrect_name": "",
@@ -37,6 +39,7 @@
   "reloadPage": "Перезагрузить страницу",
   "reload_page": "",
   "save": "",
+  "send": "",
   "server_error": "",
   "throw error": "Выдать ошибку",
   "toggle": "Скрыть/Показать",

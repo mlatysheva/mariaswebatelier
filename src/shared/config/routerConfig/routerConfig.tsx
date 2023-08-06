@@ -5,6 +5,7 @@ import { NotFoundPage } from 'pages/NotFoundPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import { ArticlesPage } from 'pages/ArticlesPage';
 import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
+import { useSelector } from 'react-redux';
 
 export type AppRoutesProps = RouteProps & {
   authOnly?: boolean;
@@ -20,12 +21,12 @@ export enum AppRoutes {
   NOT_FOUND = 'notFound',
 }
 
-export const BASE_URL = 'mariaswebatelier';
+export const BASE_URL = '';
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: `${BASE_URL}/`,
   [AppRoutes.ABOUT]: `${BASE_URL}/about`,
-  [AppRoutes.PROFILE]: `${BASE_URL}/profile`, // + :id
+  [AppRoutes.PROFILE]: `${BASE_URL}/profile/`, // + :id
   [AppRoutes.ARTICLES]: `${BASE_URL}/articles`,
   [AppRoutes.ARTICLE_DETAILS]: `${BASE_URL}/articles/`, // + :id
 
@@ -42,7 +43,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     element: <AboutPage />,
   },
   [AppRoutes.PROFILE]: {
-    path: `${RoutePath.profile}`,
+    path: `${RoutePath.profile}:id`,
     element: <ProfilePage />,
     authOnly: true,
   },

@@ -13,18 +13,15 @@ import { getAddCommentError, getAddCommentText } from '../../model/selectors/add
 
 export interface AddCommentProps {
   className?: string;
+  onSendComment: (text: string) => void,
 }
 
 const reducers: ReducersList = {
   addComment: addCommentReducer,
 };
 
-const initialReducers: ReducersList = {
-  addComment: addCommentReducer,
-};
-
 const AddComment = memo((props: AddCommentProps) => {
-  const { className } = props;
+  const { className, onSendComment } = props;
   const { t } = useTranslation();
   const text = useSelector(getAddCommentText);
   const error = useSelector(getAddCommentError);
@@ -34,18 +31,24 @@ const AddComment = memo((props: AddCommentProps) => {
     dispatch(addCommentActions.setText(value));
   }, [dispatch]);
 
+  const onSendHandler = useCallback(() => {
+    onSendComment(text || '');
+    onCommentTextChange('');
+  }, [onCommentTextChange, onSendComment, text]);
+
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+    <DynamicModuleLoader reducers={reducers}>
       <div className={classNames(cls.AddComment, {}, [className || ''])}>
         <Input
+          className={cls.input}
           placeholder={t('add_comment')}
           value={text}
           onChange={onCommentTextChange}
         />
 
         <Button
-          className={cls.commentBtn}
           theme={ButtonTheme.OUTLINE}
+          onClick={onSendHandler}
         >
           { t('send') }
         </Button>
