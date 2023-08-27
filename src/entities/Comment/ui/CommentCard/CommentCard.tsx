@@ -9,7 +9,7 @@ import { AppLink } from '../../../../shared/ui/AppLink/AppLink';
 import { RoutePath } from '../../../../shared/config/routerConfig/routerConfig';
 
 interface CommentCardProps {
-  comment: Comment;
+  comment?: Comment;
   className?: string;
   isLoading?: boolean;
 }
@@ -19,7 +19,7 @@ export const CommentCard = (props:CommentCardProps) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.CommentCard, {}, [className])}>
+      <div className={classNames(cls.CommentCard, {}, [className, cls.loading])}>
         <div className={cls.header}>
           <Skeleton width={30} height={30} border="50%" />
           <Skeleton className={cls.username} width={100} height={16} />
@@ -27,6 +27,10 @@ export const CommentCard = (props:CommentCardProps) => {
         <Skeleton className={cls.text} width="100%" height={50} />
       </div>
     );
+  }
+
+  if (!comment) {
+    return null;
   }
 
   return (
