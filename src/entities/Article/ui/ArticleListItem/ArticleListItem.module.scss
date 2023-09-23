@@ -1,0 +1,69 @@
+.ArticleListItem {
+  width: 100%;
+}
+
+.TILE {
+  width: 230px;
+  transition: 0.2s;
+  cursor: pointer;
+
+  .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+  }
+
+  &:hover {
+    .date {
+      display: block;
+    }
+
+    opacity: 0.8;
+    transform: scale(1.01);
+  }
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .infoWrapper {
+    margin-top: 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .types p {
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .views {
+    margin-left: auto;
+    margin-right: 0.75rem;
+  }
+
+  .title {
+    margin-top: 0.75rem;
+  }
+
+  .title p {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.LIST {
+  width: 100%;
+}
