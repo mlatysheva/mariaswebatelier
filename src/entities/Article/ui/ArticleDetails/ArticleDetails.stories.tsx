@@ -25,6 +25,11 @@ const article: Article = {
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
   createdAt: '26.02.2022',
+  user: {
+    id: '1',
+    username: 'admin',
+    avatar: 'https://www.shutterstock.com/image-photo/female-hacker-hacking-security-firewall-260nw-1649124790.jpg',
+  },
   type: [ArticleType.IT],
   blocks: [
     {

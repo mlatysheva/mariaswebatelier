@@ -4,7 +4,7 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '../../../../shared/lib/classNames/classNames';
 import cls from './ArticlesPage.module.scss';
-import { Article, ArticleList } from '../../../../entities/Article';
+import { Article, ArticleList, ArticleView } from '../../../../entities/Article';
 
 interface ArticlesPageProps {
   className?: string;
@@ -17,6 +17,11 @@ const article = {
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
   createdAt: '26.02.2022',
+  user: {
+    id: '1',
+    username: 'admin',
+    avatar: 'https://www.shutterstock.com/image-photo/female-hacker-hacking-security-firewall-260nw-1649124790.jpg',
+  },
   type: [
     'IT',
   ],
@@ -88,14 +93,16 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
   return (
     <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      <ArticleList articles={
-        new Array(16)
-          .fill(0)
-          .map((item, index) => ({
-            ...article,
-            id: String(index),
-          }))
-      }
+      <ArticleList
+        view={ArticleView.LIST}
+        articles={
+          new Array(16)
+            .fill(0)
+            .map((item, index) => ({
+              ...article,
+              id: String(index),
+            }))
+        }
       />
     </div>
   );

@@ -28,5 +28,6 @@
   "no_comments": "There are no comments",
   "add_comment": "Add comment",
   "send": "Send",
-  "incorrect_comment": "Missing user data, comment or article"
+  "incorrect_comment": "Missing user data, comment or article",
+  "readMore": "Read more..."
 }

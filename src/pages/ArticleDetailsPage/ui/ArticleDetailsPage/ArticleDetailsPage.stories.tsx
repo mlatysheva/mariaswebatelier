@@ -20,6 +20,11 @@ const article: Article = {
   subtitle: "What's new in JS in 2022?",
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
+  user: {
+    id: '1',
+    username: 'admin',
+    avatar: 'https://www.shutterstock.com/image-photo/female-hacker-hacking-security-firewall-260nw-1649124790.jpg',
+  },
   createdAt: '26.02.2022',
   type: [ArticleType.IT],
   blocks: [

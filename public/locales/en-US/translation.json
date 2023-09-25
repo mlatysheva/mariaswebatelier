@@ -26,5 +26,6 @@
   "articles": "Articles",
   "comments": "Comments",
   "no_comments": "There are no comments",
-  "incorrect_comment": "Missing user data, comment or article"
+  "incorrect_comment": "Missing user data, comment or article",
+  "readMore": "Read more..."
 }
