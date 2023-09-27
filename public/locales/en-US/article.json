@@ -1,8 +1,9 @@
 {
   "article_details": "Article",
   "articles": "Articles",
-  "article_not_found": "Article not found",
   "error_loading_article": "Error occurred while loading the article",
   "copy": "Copy",
-  "comments": "Comments"
+  "comments": "Comments",
+  "back_to_articles": "Back to articles",
+  "article_not_found": "Article is not found"
 }

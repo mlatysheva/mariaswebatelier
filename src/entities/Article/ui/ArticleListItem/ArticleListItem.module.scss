@@ -33,9 +33,15 @@
     margin: 1rem 0;
   }
 
+  .textBlock {
+    max-height: 200px;
+    overflow-y: hidden;
+  }
+
   .footer {
     display: flex;
     align-items: center;
+    margin-top: 1rem;
   }
 }
 

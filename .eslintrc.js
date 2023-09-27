@@ -60,6 +60,7 @@ module.exports = {
     'no-unused-vars': 'off',
     'no-undef': 'off',
     "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": "off",
   },
   globals: {
     __IS_DEV__: true,
