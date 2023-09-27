@@ -1,14 +1,7 @@
-/* eslint-disable max-len */
-/* eslint-disable i18next/no-literal-string */
-import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { classNames } from '../../../../shared/lib/classNames/classNames';
-import cls from './ArticlesPage.module.scss';
-import { Article, ArticleList, ArticleView } from '../../../../entities/Article';
-
-interface ArticlesPageProps {
-  className?: string;
-}
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import 'app/styles/index.scss';
+import { Article, ArticleView } from '../../model/types/article';
+import { ArticleListItem } from './ArticleListItem';
 
 const article = {
   id: '1',
@@ -87,26 +80,26 @@ const article = {
   ],
 } as Article;
 
-const ArticlesPage = (props: ArticlesPageProps) => {
-  const { className } = props;
-  const { t } = useTranslation('article');
+export default {
+  title: 'entities/Article/ArticleListItem',
+  component: ArticleListItem,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} as ComponentMeta<typeof ArticleListItem>;
 
-  return (
-    <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      <ArticleList
-        isLoading
-        view={ArticleView.LIST}
-        articles={
-          new Array(16)
-            .fill(0)
-            .map((item, index) => ({
-              ...article,
-              id: String(index),
-            }))
-        }
-      />
-    </div>
-  );
+const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
+
+export const List = Template.bind({});
+
+List.args = {
+  view: ArticleView.LIST,
+  article,
 };
 
-export default memo(ArticlesPage);
+export const Tile = Template.bind({});
+
+Tile.args = {
+  view: ArticleView.TILE,
+  article,
+};
