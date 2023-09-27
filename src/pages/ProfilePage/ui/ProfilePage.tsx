@@ -40,9 +40,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   const isLoading = useSelector(getProfileIsLoading);
   const readonly = useSelector(getProfileReadonly);
   const validateErrors = useSelector(getValidateProfileErrors);
-  // const { id } = useParams<{ id: string }>();
-  const userData = useSelector(getUserAuthData);
-  const id = userData?.id;
+  const { id } = useParams<{ id: string }>();
+  // const userData = useSelector(getUserAuthData);
+  // const id = userData?.id;
 
   const validateErrorTranslations = {
     [ValidateProfileError.INCORRECT_AGE]: t('incorrect_age'),

@@ -15,6 +15,16 @@ export const CommentList = (props:CommentListProps) => {
   const { comments, className, isLoading } = props;
   const { t } = useTranslation();
 
+  if (isLoading) {
+    return (
+      <div className={classNames(cls.CommentList, {}, [className])}>
+        <CommentCard isLoading />
+        <CommentCard isLoading />
+        <CommentCard isLoading />
+      </div>
+    );
+  }
+
   return (
     // eslint-disable-next-line i18next/no-literal-string
     <div className={classNames(cls.CommentList, {}, [className])}>

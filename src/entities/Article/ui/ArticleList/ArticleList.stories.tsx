@@ -1,14 +1,7 @@
-/* eslint-disable max-len */
-/* eslint-disable i18next/no-literal-string */
-import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { classNames } from '../../../../shared/lib/classNames/classNames';
-import cls from './ArticlesPage.module.scss';
-import { Article, ArticleList, ArticleView } from '../../../../entities/Article';
-
-interface ArticlesPageProps {
-  className?: string;
-}
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import 'app/styles/index.scss';
+import { ArticleList } from './ArticleList';
+import { Article, ArticleView } from '../../model/types/article';
 
 const article = {
   id: '1',
@@ -87,26 +80,52 @@ const article = {
   ],
 } as Article;
 
-const ArticlesPage = (props: ArticlesPageProps) => {
-  const { className } = props;
-  const { t } = useTranslation('article');
+export default {
+  title: 'entities/Article/ArticleList',
+  component: ArticleList,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} as ComponentMeta<typeof ArticleList>;
 
-  return (
-    <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      <ArticleList
-        isLoading
-        view={ArticleView.LIST}
-        articles={
-          new Array(16)
-            .fill(0)
-            .map((item, index) => ({
-              ...article,
-              id: String(index),
-            }))
-        }
-      />
-    </div>
-  );
+const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
+
+export const LoadingList = Template.bind({});
+
+LoadingList.args = {
+  isLoading: true,
+  articles: [],
+  view: ArticleView.LIST,
 };
 
-export default memo(ArticlesPage);
+export const LoadingTile = Template.bind({});
+
+LoadingTile.args = {
+  isLoading: true,
+  articles: [],
+  view: ArticleView.TILE,
+};
+
+export const ListTile = Template.bind({});
+ListTile.args = {
+  articles: new Array(9)
+    .fill(0)
+    .map((_item, index) => ({
+      ...article,
+      id: String(index),
+    })),
+  isLoading: false,
+  view: ArticleView.LIST,
+};
+
+export const ListList = Template.bind({});
+ListList.args = {
+  articles: new Array(9)
+    .fill(0)
+    .map((_item, index) => ({
+      ...article,
+      id: String(index),
+    })),
+  isLoading: false,
+  view: ArticleView.TILE,
+};

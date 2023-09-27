@@ -4,5 +4,6 @@
   "article_not_found": "Статья не найдена",
   "error_loading_article": "При загрузке статьи возникла ошибка",
   "copy": "Копировать",
-  "comments": "Комментарии"
+  "comments": "Комментарии",
+  "back_to_articles": "К списку статей"
 }

@@ -1,6 +1,7 @@
 .ProfilePageHeader {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .header {
@@ -14,4 +15,8 @@
 
 .saveBtn {
   margin-left: 0.5rem;
+}
+
+.btnsWrapper {
+  margin-left: auto;
 }
