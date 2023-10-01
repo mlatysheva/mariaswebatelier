@@ -4,10 +4,6 @@
   "article_not_found": "Article not found",
   "error_loading_article": "Error occurred while loading the article",
   "copy": "Copy",
-  "comments": "Comments",
-  "article": {
-    "article_not_found": "Article is not found",
-    "back_to_articles": "Back to list of articles",
-    "comments": "Comments"
-  }
+  "back_to_articles": "Back to list of articles",
+  "comments": "Comments"
 }

@@ -1,0 +1,10 @@
+.ArticleViewSelector {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.notSelected {
+  fill: var(--secondary-color);
+}

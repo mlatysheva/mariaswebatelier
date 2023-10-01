@@ -15,6 +15,7 @@ import { To } from 'history';
 import { ArticleDetailsSchema } from 'entities/Article';
 import { ArticleDetailsCommentsSchema } from '../../../../pages/ArticleDetailsPage';
 import { AddCommentSchema } from '../../../../features/AddComment';
+import { ArticlesPageSchema } from '../../../../pages/ArticlesPage';
 
 export interface StateSchema {
   counter: CounterSchema;
@@ -26,6 +27,7 @@ export interface StateSchema {
   articleDetails?: ArticleDetailsSchema;
   articleDetailsComments?: ArticleDetailsCommentsSchema;
   addComment?: AddCommentSchema;
+  articlesPage?: ArticlesPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
