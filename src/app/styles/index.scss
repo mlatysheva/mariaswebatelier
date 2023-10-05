@@ -28,17 +28,6 @@ body {
   display: flex;
 }
 
-.page-wrapper {
-  width: calc(100% - var(--sidebar-width));
-
-  // flex-shrink: 100;
-  height: calc(100vh - var(--navbar-height));
-  margin-left: 2rem;
-  margin-right: 1rem;
-  padding: 1.5rem;
-  overflow-y: auto;
-}
-
 .hero-text {
   font-size: var(--hero-text-size);
   font-weight: 700;
