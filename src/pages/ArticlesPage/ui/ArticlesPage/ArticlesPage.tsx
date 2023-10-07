@@ -18,9 +18,9 @@ import {
   getArticlesPageInitialized, getArticlesPageIsLoading, getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { ArticleViewSelector } from '../../../../widgets/ArticleViewSelector';
-import { Page } from '../../../../shared/ui/Page/Page';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage';
+import { Page } from '../../../../widgets/Page';
 
 interface ArticlesPageProps {
   className?: string;
@@ -36,7 +36,6 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   const articles = useSelector(getArticles.selectAll);
   const isLoading = useSelector(getArticlesPageIsLoading);
   const view = useSelector(getArticlesPageView);
-  const initialised = useSelector(getArticlesPageInitialized);
 
   const onChangeView = useCallback((view: ArticleView) => {
     dispatch(articlesPageActions.setView(view));
