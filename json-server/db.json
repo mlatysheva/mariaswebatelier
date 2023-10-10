@@ -17,7 +17,7 @@
       "title": "Javascript news",
       "subtitle": "What's new in JS in 2022?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
+      "views": 100400,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -89,8 +89,8 @@
       "title": "Python news",
       "subtitle": "What's new in Python in 2023?",
       "img": "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png",
-      "views": 1022,
-      "createdAt": "26.09.2023",
+      "views": 70022,
+      "createdAt": "26.05.2023",
       "userId": "2",
       "type": [
         "IT"
@@ -161,7 +161,7 @@
       "title": "Java news",
       "subtitle": "What's new in Java in 2023?",
       "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
-      "views": 1022,
+      "views": 50022,
       "createdAt": "29.09.2023",
       "userId": "2",
       "type": [
@@ -204,8 +204,8 @@
       "title": "Kotlin news",
       "subtitle": "What's new in Kotlin in 2023?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "03.10.2023",
+      "views": 805,
+      "createdAt": "15.06.2023",
       "userId": "2",
       "type": [
         "IT"
@@ -245,10 +245,10 @@
     {
       "id": "5",
       "title": "Pascal news",
-      "subtitle": "What's new in Pascal in 2023?",
+      "subtitle": "What's new in Pascal in 2022?",
       "img": "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png",
-      "views": 1022,
-      "createdAt": "01.10.2023",
+      "views": 5220,
+      "createdAt": "01.10.2022",
       "userId": "2",
       "type": [
         "IT"
@@ -290,8 +290,8 @@
       "title": "Typescript news",
       "subtitle": "What's new in Typescript in 2023?",
       "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
-      "views": 1022,
-      "createdAt": "03.10.2023",
+      "views": 40022,
+      "createdAt": "13.04.2023",
       "userId": "2",
       "type": [
         "IT"
@@ -331,10 +331,10 @@
     {
       "id": "7",
       "title": "SQL news",
-      "subtitle": "What's new in SQL in 2023?",
+      "subtitle": "What's new in SQL in 2020?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "03.10.2023",
+      "views": 100022,
+      "createdAt": "13.08.2020",
       "userId": "2",
       "type": [
         "IT"
@@ -376,8 +376,8 @@
       "title": "MongoDB news",
       "subtitle": "What's new in MongoDB in 2023?",
       "img": "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png",
-      "views": 1022,
-      "createdAt": "03.10.2023",
+      "views": 10022,
+      "createdAt": "10.02.2023",
       "userId": "2",
       "type": [
         "IT"
@@ -419,8 +419,8 @@
       "title": "Go news",
       "subtitle": "What's new in Go in 2023?",
       "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
-      "views": 1022,
-      "createdAt": "03.10.2023",
+      "views": 81022,
+      "createdAt": "23.07.2023",
       "userId": "2",
       "type": [
         "IT"
@@ -460,10 +460,10 @@
     {
       "id": "12",
       "title": "AWS news",
-      "subtitle": "What's new in AWS in 2023?",
+      "subtitle": "What's new in AWS in 2022?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "03.10.2023",
+      "views": 4022,
+      "createdAt": "03.05.2022",
       "userId": "2",
       "type": [
         "IT"
@@ -503,10 +503,10 @@
     {
       "id": "14",
       "title": "Postgres news",
-      "subtitle": "What's new in Postgres in 2023?",
+      "subtitle": "What's new in Postgres in 2022?",
       "img": "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png",
-      "views": 1022,
-      "createdAt": "03.10.2023",
+      "views": 2012,
+      "createdAt": "03.10.2022",
       "userId": "2",
       "type": [
         "IT"
@@ -548,7 +548,7 @@
       "title": "React news",
       "subtitle": "What's new in React in 2023?",
       "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
-      "views": 1022,
+      "views": 802,
       "createdAt": "03.10.2023",
       "userId": "2",
       "type": [
@@ -589,10 +589,53 @@
     {
       "id": "16",
       "title": "Angular news",
-      "subtitle": "What's new in Angular in 2023?",
+      "subtitle": "What's new in Angular in 2020?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "03.10.2023",
+      "views": 11022,
+      "createdAt": "03.10.2020",
+      "userId": "2",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Block heading",
+          "paragraphs": [
+            "The program that is traditionally called 'Hello, world!' is very simple. It logs somewhere the phrase 'Hello, world!' or another similar phrase using a given language.",
+            "JavaScript is a language for which programs written with it can be executed in various environments. In our case, what is at issue are the browsers and the server platform Node.js. If you haven't written a signle line in JS and are reading this text in a browser on a desktop, this means that you are literally just few seconds away from your first Javascript program",
+            "There are also other ways to launch JS code in the browser. For instance, if we talk about common use of Javascript programs, they are loaded into the browser to ensure the operation of web pages. As a rule, the code is written in the form of separate files having the extension js, which are connected to web pages. However, the program code can be included directly into the code of a page. All this is done by way of the tag <script>. When the brower sees such code, it executes it. See detailed information about the tag script on w3school.com. In particular, let's consider an example demonstrating the work with a web page by way of Javascript, which is provided on this resource. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "9",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Numpy news",
+      "subtitle": "What's new in Numpy in 2021?",
+      "img": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png",
+      "views": 14022,
+      "createdAt": "03.10.2021",
       "userId": "2",
       "type": [
         "IT"

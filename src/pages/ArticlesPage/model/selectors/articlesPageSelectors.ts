@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { StateSchema } from '../../../../app/providers/StoreProvider';
-import { ArticleView } from '../../../../entities/Article';
+import { ArticleSortField, ArticleView } from '../../../../entities/Article';
 
 export const getArticlesPageIsLoading = (state: StateSchema) => state.articlesPage?.isLoading || false;
 export const getArticlesPageError = (state: StateSchema) => state.articlesPage?.error;
@@ -9,3 +9,6 @@ export const getArticlesPageNumber = (state: StateSchema) => state.articlesPage?
 export const getArticlesPageLimit = (state: StateSchema) => state.articlesPage?.limit || 9;
 export const getArticlesPageHasMore = (state: StateSchema) => state.articlesPage?.hasMore;
 export const getArticlesPageInitialized = (state: StateSchema) => state.articlesPage?._initialized;
+export const getArticlesPageSort = (state: StateSchema) => state.articlesPage?.sort || ArticleSortField.CREATED;
+export const getArticlesPageOrder = (state: StateSchema) => state.articlesPage?.order || 'desc';
+export const getArticlesPageSearch = (state: StateSchema) => state.articlesPage?.search || '';

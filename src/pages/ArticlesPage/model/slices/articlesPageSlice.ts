@@ -9,6 +9,8 @@ import { Article, ArticleView } from '../../../../entities/Article';
 import { ArticlesPageSchema } from '../..';
 import { fetchArticlesList } from '../services/fetchArticlesList';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '../../../../shared/constants/localStorage';
+import { ArticleSortField } from '../../../../entities/Article/model/types/article';
+import { SortOrder } from '../types/articlesPageSchema';
 
 const articlesAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,
@@ -28,6 +30,11 @@ const articlesPageSlice = createSlice({
     entities: {},
     page: 1,
     hasMore: true,
+    _initialized: false,
+    limit: 9,
+    order: 'desc',
+    sort: ArticleSortField.CREATED,
+    search: '',
   }),
   reducers: {
     setView(state, action: PayloadAction<ArticleView>) {
@@ -42,9 +49,19 @@ const articlesPageSlice = createSlice({
       ) as ArticleView;
       state.view = view;
       state.limit = view === ArticleView.LIST ? 4 : 9;
+      state._initialized = true;
     },
     setPage(state, action: PayloadAction<number>) {
       state.page = action.payload;
+    },
+    setOrder(state, action: PayloadAction<SortOrder>) {
+      state.order = action.payload;
+    },
+    setSort(state, action: PayloadAction<ArticleSortField>) {
+      state.sort = action.payload;
+    },
+    setSearch(state, action: PayloadAction<string>) {
+      state.search = action.payload;
     },
   },
   extraReducers: (builder) => {

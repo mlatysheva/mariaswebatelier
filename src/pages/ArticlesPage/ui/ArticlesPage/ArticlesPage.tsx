@@ -15,12 +15,12 @@ import {
 import { useInitialEffect } from '../../../../shared/lib/hooks/useInitialEffect';
 import { useAppDispatch } from '../../../../shared/lib/hooks/useAppDispatch';
 import {
-  getArticlesPageInitialized, getArticlesPageIsLoading, getArticlesPageView,
+  getArticlesPageIsLoading, getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
-import { ArticleViewSelector } from '../../../../widgets/ArticleViewSelector';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage';
 import { Page } from '../../../../widgets/Page';
+import ArticlesPageFilters from '../ArticlesPageFilters/ArticlesPageFilters';
 
 interface ArticlesPageProps {
   className?: string;
@@ -55,8 +55,9 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.ArticlesPage, {}, [className])}
       >
-        <ArticleViewSelector view={view} onViewClick={onChangeView} />
+        <ArticlesPageFilters />
         <ArticleList
+          className={cls.list}
           isLoading={isLoading}
           view={view}
           articles={articles}

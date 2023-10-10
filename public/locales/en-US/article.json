@@ -5,5 +5,13 @@
   "copy": "Copy",
   "comments": "Comments",
   "back_to_articles": "Back to articles",
-  "article_not_found": "Article is not found"
+  "article_not_found": "Article is not found",
+  "sort_by": "Sort by",
+  "search": "Search",
+  "by": "by",
+  "ascending": "ascending",
+  "descending": "descending",
+  "created_on": "Created on",
+  "title": "Title",
+  "views": "Views"
 }
