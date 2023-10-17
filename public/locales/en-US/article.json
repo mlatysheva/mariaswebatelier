@@ -11,7 +11,11 @@
   "by": "by",
   "ascending": "ascending",
   "descending": "descending",
-  "created_on": "Created on",
+  "created_on": "created on",
   "title": "Title",
-  "views": "Views"
+  "views": "Views",
+  "it": "IT",
+  "economics": "Economics",
+  "science": "Science",
+  "all": "All"
 }

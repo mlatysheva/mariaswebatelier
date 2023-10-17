@@ -9,9 +9,13 @@
   "sort_by": "Sort by",
   "search": "Search",
   "by": "by",
-  "ascending": "Ascending",
-  "descending": "Descending",
-  "created_on": "Created on",
+  "ascending": "ascending",
+  "descending": "descending",
+  "created_on": "created on",
   "title": "Title",
-  "views": "Views"
+  "views": "Views",
+  "it": "IT",
+  "economics": "Economics",
+  "science": "Science",
+  "all": "All"
 }
