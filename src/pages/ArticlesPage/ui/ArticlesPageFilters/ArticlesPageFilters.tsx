@@ -5,7 +5,9 @@ import { Card } from 'shared/ui/Card/Card';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { ArticleViewSelector } from 'widgets/ArticleViewSelector';
-import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article';
+import {
+  ArticleSortField, ArticleType, ArticleTypeTabs, ArticleView,
+} from 'entities/Article';
 import { Input } from 'shared/ui/Input/Input';
 import { ArticleSortSelector } from 'widgets/ArticleSortSelector';
 import cls from './ArticlesPageFilters.module.scss';
@@ -66,30 +68,11 @@ const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     debouncedFetchData();
   }, [dispatch, debouncedFetchData]);
 
-  const onchangeType = useCallback((tab: TabItem) => {
-    dispatch(articlesPageActions.setType(tab.value as ArticleType));
+  const onchangeType = useCallback((type: ArticleType) => {
+    dispatch(articlesPageActions.setType(type));
     dispatch(articlesPageActions.setPage(1));
-    debouncedFetchData();
-  }, [dispatch, debouncedFetchData]);
-
-  const typeTabs = useMemo<TabItem[]>(() => [
-    {
-      value: ArticleType.ALL,
-      content: t('all'),
-    },
-    {
-      value: ArticleType.IT,
-      content: t('it'),
-    },
-    {
-      value: ArticleType.ECONOMICS,
-      content: t('economics'),
-    },
-    {
-      value: ArticleType.SCIENCE,
-      content: t('science'),
-    },
-  ], [t]);
+    fetchData();
+  }, [dispatch, fetchData]);
 
   return (
     <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
@@ -105,11 +88,9 @@ const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
       <Card className={cls.search}>
         <Input onChange={onChangeSearch} placeholder={t('search')} />
       </Card>
-      <Tabs
-        tabs={typeTabs}
+      <ArticleTypeTabs
         value={type}
-        onTabClick={onchangeType}
-        className={cls.tabs}
+        onChangeType={onchangeType}
       />
     </div>
   );

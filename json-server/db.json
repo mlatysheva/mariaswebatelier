@@ -671,6 +671,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": "18",
+      "title": "Inflation is breaking record",
+      "subtitle": "Inflation trends in 2023",
+      "img": "https://cache.pressmailing.net/content/18490e73-1300-4671-a1ad-8a12c4e2d22a/Canada%20Life-Highligh~rage_22.09.2022.jpg",
+      "views": 24025,
+      "createdAt": "05.10.2023",
+      "userId": "4",
+      "type": [
+        "ECONOMICS"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Block heading",
+          "paragraphs": [
+            "Morbi a pretium purus.",
+            "Fusce auctor arcu ut tellus dapibus, eu sodales lacus viverra. Mauris id finibus lorem. Pellentesque tempus erat faucibus suscipit sollicitudin.",
+            "Vivamus est metus, ullamcorper quis lacus non, dignissim rutrum felis. Nulla tempus, neque sit amet iaculis tincidunt, augue eros venenatis justo, ut finibus augue orci id leo. Nulla fermentum purus sed sem dapibus cursus. Morbi varius mauris erat, maximus lobortis magna sollicitudin nec."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://cache.pressmailing.net/content/18490e73-1300-4671-a1ad-8a12c4e2d22a/Canada%20Life-Highligh~rage_22.09.2022.jpg",
+          "title": "Inflation visualisation"
+        },
+        {
+          "id": "9",
+          "type": "TEXT",
+          "title": "Lorem ipsum dolor sit amet",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris ex, finibus quis nibh ac, tempus convallis turpis. Vivamus aliquet, lectus ut convallis auctor, lacus magna feugiat ligula, non accumsan sapien lorem at est. Pellentesque sed rhoncus lacus. Vestibulum erat augue, tempor nec aliquet nec, scelerisque nec elit. Donec sodales lacinia tincidunt. Aenean est nisl, venenatis at nisl nec, viverra vestibulum urna. Nulla vulputate ultricies tincidunt. Praesent posuere id odio id blandit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Impact of AI",
+      "subtitle": "How does artificial intelligence affect our lives?",
+      "img": "https://www.project-sherpa.eu/wp-content/uploads/2020/12/MachineLearning-900x506-1.jpg",
+      "views": 234025,
+      "createdAt": "14.09.2023",
+      "userId": "3",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Block heading",
+          "paragraphs": [
+            "AI has become increasingly important in today's world as it has the potential to revolutionize many industries, including healthcare, finance, education, and more. The use of AI has already improved efficiency, reduced costs, and increased accuracy in various fields.",
+            "In this article, we will explore the impact of AI on our lives, including its use in the digitalization of society. We will also look at its advancements in education and its potential for the future. One of the most notable uses of AI in the film industry was in the production of the movie Her, where AI was used to create a believable and realistic operating system character.",
+            "This demonstrated the potential of AI, as it can be used to create new and unique characters and storylines. AI can now be used to create special effects, automate tasks, and even generate entire movies."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.project-sherpa.eu/wp-content/uploads/2020/12/MachineLearning-900x506-1.jpg",
+          "title": "All-mighty AI"
+        },
+        {
+          "id": "9",
+          "type": "TEXT",
+          "title": "Lorem ipsum dolor sit amet",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris ex, finibus quis nibh ac, tempus convallis turpis.",
+            "Vivamus aliquet, lectus ut convallis auctor, lacus magna feugiat ligula, non accumsan sapien lorem at est. Pellentesque sed rhoncus lacus. Vestibulum erat augue, tempor nec aliquet nec, scelerisque nec elit.",
+            "Donec sodales lacinia tincidunt. Aenean est nisl, venenatis at nisl nec, viverra vestibulum urna. Nulla vulputate ultricies tincidunt. Praesent posuere id odio id blandit."
+          ]
+        }
+      ]
     }
   ],
   "comments": [
