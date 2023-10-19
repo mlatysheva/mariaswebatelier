@@ -11,10 +11,13 @@ import { LoginSchema } from 'features/AuthByUsername';
 import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
-import { ArticleDetailsCommentsSchema } from '../../../../pages/ArticleDetailsPage';
-import { AddCommentSchema } from '../../../../features/AddComment';
-import { ArticlesPageSchema } from '../../../../pages/ArticlesPage';
-import { ScrollPositionSchema } from '../../../../features/ScrollPosition';
+import { AddCommentSchema } from 'features/AddComment';
+import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { ScrollPositionSchema } from 'features/ScrollPosition';
+import {
+  ArticleDetailsCommentsSchema,
+  ArticleDetailsRecommendationsSchema,
+} from 'pages/ArticleDetailsPage';
 
 export interface StateSchema {
   counter: CounterSchema;
@@ -26,6 +29,7 @@ export interface StateSchema {
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
   articleDetailsComments?: ArticleDetailsCommentsSchema;
+  articleDetailsRecommendations?: ArticleDetailsRecommendationsSchema;
   addComment?: AddCommentSchema;
   articlesPage?: ArticlesPageSchema;
 }

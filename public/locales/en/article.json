@@ -18,5 +18,6 @@
   "economics": "Economics",
   "science": "Science",
   "all": "All",
-  "no_articles": "No articles were found"
+  "no_articles": "No articles were found",
+  "recommendations": "Recommendations"
 }
