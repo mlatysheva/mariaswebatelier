@@ -15,8 +15,7 @@ import { AddCommentSchema } from 'features/AddComment';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { ScrollPositionSchema } from 'features/ScrollPosition';
 import {
-  ArticleDetailsCommentsSchema,
-  ArticleDetailsRecommendationsSchema,
+  ArticleDetailsPageSchema,
 } from 'pages/ArticleDetailsPage';
 
 export interface StateSchema {
@@ -28,10 +27,9 @@ export interface StateSchema {
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
-  articleDetailsComments?: ArticleDetailsCommentsSchema;
-  articleDetailsRecommendations?: ArticleDetailsRecommendationsSchema;
   addComment?: AddCommentSchema;
   articlesPage?: ArticlesPageSchema;
+  articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
