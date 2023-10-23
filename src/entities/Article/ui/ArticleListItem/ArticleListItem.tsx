@@ -1,7 +1,5 @@
-import React, { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import React, { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { text } from 'stream/consumers';
-import { useNavigate } from 'react-router-dom';
 import { classNames } from '../../../../shared/lib/classNames/classNames';
 import cls from './ArticleListItem.module.scss';
 import {
@@ -51,8 +49,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
       <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
         <Card className={cls.card}>
           <div className={cls.header}>
-            <Avatar size={30} src={article.user.avatar} />
-            <Text text={article.user.username} className={cls.username} />
+            {article.user && article.user.avatar && (
+              <Avatar size={30} src={article.user.avatar} />
+            )}
+            {article.user && article.user.username && (
+              <Text text={article.user.username} className={cls.username} />
+            )}
             <Text className={cls.date} text={article.createdAt} />
           </div>
           <Text text={article.title} className={cls.title} />

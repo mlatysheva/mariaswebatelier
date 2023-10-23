@@ -19,5 +19,7 @@
   "science": "Science",
   "all": "All",
   "no_articles": "No articles were found",
-  "recommendations": "Recommendations"
+  "recommendations": "Recommendations",
+  "edit_article": "Edit article ",
+  "create_article": "Create an article"
 }

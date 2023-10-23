@@ -6,6 +6,7 @@ import { ProfilePage } from 'pages/ProfilePage';
 import { ArticlesPage } from 'pages/ArticlesPage';
 import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
 import { useSelector } from 'react-redux';
+import { ArticleEditPage } from '../../../pages/ArticleEditPage';
 
 export type AppRoutesProps = RouteProps & {
   authOnly?: boolean;
@@ -17,6 +18,8 @@ export enum AppRoutes {
   PROFILE = 'profile',
   ARTICLES = 'articles',
   ARTICLE_DETAILS = 'article_details',
+  ARTICLE_CREATE = 'article_create',
+  ARTICLE_EDIT = 'article_edit',
 
   NOT_FOUND = 'notFound',
 }
@@ -29,6 +32,8 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.PROFILE]: `${BASE_URL}/profile/`, // + :id
   [AppRoutes.ARTICLES]: `${BASE_URL}/articles`,
   [AppRoutes.ARTICLE_DETAILS]: `${BASE_URL}/articles/`, // + :id
+  [AppRoutes.ARTICLE_CREATE]: `${BASE_URL}/articles/new`, // + :id
+  [AppRoutes.ARTICLE_EDIT]: `${BASE_URL}/articles/:id/edit`, // + :id
 
   [AppRoutes.NOT_FOUND]: '*',
 };
@@ -55,6 +60,16 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.ARTICLE_DETAILS]: {
     path: `${RoutePath.article_details}:id`,
     element: <ArticleDetailsPage />,
+    authOnly: true,
+  },
+  [AppRoutes.ARTICLE_CREATE]: {
+    path: `${RoutePath.article_create}`,
+    element: <ArticleEditPage />,
+    authOnly: true,
+  },
+  [AppRoutes.ARTICLE_EDIT]: {
+    path: `${RoutePath.article_edit}`,
+    element: <ArticleEditPage />,
     authOnly: true,
   },
   [AppRoutes.NOT_FOUND]: {
