@@ -27,5 +27,7 @@
   "comments": "Comments",
   "no_comments": "There are no comments",
   "incorrect_comment": "Missing user data, comment or article",
-  "readMore": "Read more..."
+  "readMore": "Read more...",
+  "maria_web": "Maria's Web Atelier",
+  "create_article": "Create article"
 }
