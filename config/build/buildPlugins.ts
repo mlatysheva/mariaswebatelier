@@ -29,8 +29,8 @@ export function buildPlugins({
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: 'public/locales',
-          to: 'locales',
+          from: paths.locales,
+          to: paths.buildLocales,
           force: true,
         },
       ],

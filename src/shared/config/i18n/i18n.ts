@@ -15,8 +15,9 @@ i18n
     },
     backend: {
       loadPath:
-      __IS_DEV__ ? '../../locales/{{lng}}/{{ns}}.json'
-        : '/locales/{{lng}}/{{ns}}.json',
+      // __IS_DEV__ ? '../../locales/{{lng}}/{{ns}}.json'
+      //   : '/locales/{{lng}}/{{ns}}.json',
+      '/locales/{{lng}}/{{ns}}.json',
     },
   });
 
