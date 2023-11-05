@@ -855,14 +855,14 @@
     },
     {
       "id": "2",
-      "firstname": "Yuretz",
+      "firstname": "Yurec",
       "lastname": "Nikulin",
       "age": 50,
       "city": "Munich",
       "currency": "EUR",
       "avatar": "https://www.shutterstock.com/image-photo/young-professional-female-hacker-using-600w-651477679.jpg",
       "username": "nikulyu",
-      "country": "Russia"
+      "country": "Germany"
     }
   ]
 }

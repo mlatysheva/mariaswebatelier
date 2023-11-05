@@ -29,7 +29,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
     readonly,
   } = props;
 
-  const { t } = useTranslation();
+  const { t } = useTranslation('profile');
 
   const mods: Mods = {
     [cls.readonly]: readonly,
