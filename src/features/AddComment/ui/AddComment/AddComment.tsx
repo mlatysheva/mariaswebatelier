@@ -10,6 +10,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { addCommentActions, addCommentReducer } from '../../model/slices/addCommentSlice';
 import cls from './AddComment.module.scss';
 import { getAddCommentError, getAddCommentText } from '../../model/selectors/addCommentSelectors';
+import { HStack } from '../../../../shared/ui/Stack';
 
 export interface AddCommentProps {
   className?: string;
@@ -38,7 +39,7 @@ const AddComment = memo((props: AddCommentProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.AddComment, {}, [className || ''])}>
+      <HStack max justify="between" className={classNames(cls.AddComment, {}, [className || ''])}>
         <Input
           className={cls.input}
           placeholder={t('add_comment')}
@@ -52,7 +53,7 @@ const AddComment = memo((props: AddCommentProps) => {
         >
           { t('send') }
         </Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   );
 });

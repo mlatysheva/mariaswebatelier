@@ -1,43 +1,39 @@
 import { useTranslation } from 'react-i18next';
 import { Text } from 'shared/ui/Text/Text';
-import { classNames } from '../../../../shared/lib/classNames/classNames';
-import cls from './CommentList.module.scss';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Comment } from '../../model/types/comments';
+import { VStack } from '../../../../shared/ui/Stack';
 
 interface CommentListProps {
   comments?: Comment[];
-  className?: string;
   isLoading?: boolean;
 }
 
 export const CommentList = (props:CommentListProps) => {
-  const { comments, className, isLoading } = props;
+  const { comments, isLoading } = props;
   const { t } = useTranslation();
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.CommentList, {}, [className])}>
+      <VStack max align="start">
         <CommentCard isLoading />
         <CommentCard isLoading />
         <CommentCard isLoading />
-      </div>
+      </VStack>
     );
   }
 
   return (
-    // eslint-disable-next-line i18next/no-literal-string
-    <div className={classNames(cls.CommentList, {}, [className])}>
+    <VStack max align="start" gap="16">
       {comments?.length
         ? comments.map((comment) => (
           <CommentCard
             isLoading={isLoading}
-            className={cls.comment}
             key={comment.id}
             comment={comment}
           />
         ))
         : <Text text={t('no_comments')} />}
-    </div>
+    </VStack>
   );
 };

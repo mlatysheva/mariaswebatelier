@@ -7,8 +7,8 @@ import {
   getProfileData, getProfileReadonly, profileActions, updateProfileData,
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import cls from './ProfilePageHeader.module.scss';
-import { getUserAuthData } from '../../../../entities/User';
+import { getUserAuthData } from 'entities/User';
+import { HStack } from 'shared/ui/Stack/HStack/HStack';
 
 interface ProfilePageHeaderProps {
   className?: string;
@@ -36,25 +36,23 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+    <HStack justify="between" className={classNames('', {}, [className])}>
       <h1 className="hero-text">{t('profile')}</h1>
       { canEdit
         && (
-          <div className={cls.btnsWrapper}>
+          <div>
             { readonly ? (
               <Button
                 theme={ButtonTheme.OUTLINE}
-                className={cls.editBtn}
                 size={ButtonSize.L}
                 onClick={onEdit}
               >
                 {t('edit')}
               </Button>
             ) : (
-              <>
+              <HStack gap="16">
                 <Button
                   theme={ButtonTheme.OUTLINE_ACCENT}
-                  className={cls.editBtn}
                   size={ButtonSize.L}
                   onClick={onCancelEdit}
                 >
@@ -62,16 +60,15 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
                 </Button>
                 <Button
                   theme={ButtonTheme.OUTLINE}
-                  className={cls.saveBtn}
                   size={ButtonSize.L}
                   onClick={onSave}
                 >
                   {t('save')}
                 </Button>
-              </>
+              </HStack>
             )}
           </div>
         )}
-    </div>
+    </HStack>
   );
 };

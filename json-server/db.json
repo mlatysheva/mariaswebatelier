@@ -1,4 +1,44 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "role": "ADMIN",
+      "avatar": "https://www.shutterstock.com/image-photo/female-hacker-hacking-security-firewall-260nw-1649124790.jpg"
+    },
+    {
+      "id": "2",
+      "username": "Yury",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://www.shutterstock.com/image-photo/young-professional-female-hacker-using-600w-651477679.jpg"
+    }
+  ],
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Maria",
+      "lastname": "Latysheva",
+      "age": 45,
+      "city": "Madrid",
+      "currency": "RUB",
+      "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+      "username": "latysma",
+      "country": "Russia"
+    },
+    {
+      "id": "2",
+      "firstname": "Yurec",
+      "lastname": "Nikulin",
+      "age": 50,
+      "city": "Munich",
+      "currency": "EUR",
+      "avatar": "https://www.shutterstock.com/image-photo/young-professional-female-hacker-using-600w-651477679.jpg",
+      "username": "nikulyu",
+      "country": "Germany"
+    }
+  ],
   "posts": [
     {
       "id": "1",
@@ -823,46 +863,12 @@
       "userId": "1",
       "text": "Кто-то еще использует петон сейчас?",
       "id": "qmbyNQA"
-    }
-  ],
-  "users": [
-    {
-      "id": "1",
-      "username": "admin",
-      "password": "123",
-      "role": "ADMIN",
-      "avatar": "https://www.shutterstock.com/image-photo/female-hacker-hacking-security-firewall-260nw-1649124790.jpg"
     },
     {
-      "id": "2",
-      "username": "user",
-      "password": "123",
-      "role": "USER",
-      "avatar": "https://www.shutterstock.com/image-photo/young-professional-female-hacker-using-600w-651477679.jpg"
-    }
-  ],
-  "profile": [
-    {
-      "id": "1",
-      "firstname": "Maria",
-      "lastname": "Latysheva",
-      "age": 45,
-      "city": "Madrid",
-      "currency": "RUB",
-      "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-      "username": "latysma",
-      "country": "Russia"
-    },
-    {
-      "id": "2",
-      "firstname": "Yurec",
-      "lastname": "Nikulin",
-      "age": 50,
-      "city": "Munich",
-      "currency": "EUR",
-      "avatar": "https://www.shutterstock.com/image-photo/young-professional-female-hacker-using-600w-651477679.jpg",
-      "username": "nikulyu",
-      "country": "Germany"
+      "articleId": "3",
+      "userId": "2",
+      "text": "When are you planning to publish a new video?",
+      "id": "N4Cid33"
     }
   ]
 }

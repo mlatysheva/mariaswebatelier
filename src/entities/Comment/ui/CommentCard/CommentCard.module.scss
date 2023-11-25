@@ -1,21 +1,6 @@
 .CommentCard {
-  display: flex;
-  flex-direction: column;
   padding: 1rem;
   border: 1px solid var(--primary-color);
-}
-
-.header {
-  display: flex;
-  align-items: center;
-}
-
-.text {
-  margin-top: 1rem;
-}
-
-.username {
-  margin-left: 1rem;
 }
 
 .loading {
