@@ -11,6 +11,8 @@
   "your_city": "Ваш город",
   "enter_username": "Введите имя пользователя",
   "enter_avatar": "Введите ссылку на аватар",
+  "indicate_currency": "Укажите валюту",
+  "indicate_country": "Укажите страну",
   "incorrect_age": "Укажите правильный возраст",
   "incorrect_age_range": "Возраст должен быть в пределах 16-90 лет",
   "incorrect_country": "Выберите страну из списка",
