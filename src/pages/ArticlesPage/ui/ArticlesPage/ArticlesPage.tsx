@@ -3,13 +3,12 @@ import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { classNames } from '../../../../shared/lib/classNames/classNames';
 import cls from './ArticlesPage.module.scss';
-import { ArticleList, ArticleView } from '../../../../entities/Article';
+import { ArticleList } from '../../../../entities/Article';
 import {
   DynamicModuleLoader,
   ReducersList,
 } from '../../../../shared/lib/components/DynamicModuleLoader';
 import {
-  articlesPageActions,
   articlesPageReducer,
   getArticles,
 } from '../../model/slices/articlesPageSlice';
