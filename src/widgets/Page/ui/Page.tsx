@@ -45,7 +45,7 @@ export const Page = memo((props: PageProps) => {
       position: e.currentTarget.scrollTop,
       path: pathname,
     }));
-  }, 1000);
+  }, 500);
 
   return (
     <section
