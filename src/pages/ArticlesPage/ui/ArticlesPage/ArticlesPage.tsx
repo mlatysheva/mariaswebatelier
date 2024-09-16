@@ -3,19 +3,19 @@ import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { classNames } from '../../../../shared/lib/classNames/classNames';
 import cls from './ArticlesPage.module.scss';
-import { ArticleList, ArticleView } from '../../../../entities/Article';
+import { ArticleList } from '../../../../entities/Article';
 import {
   DynamicModuleLoader,
   ReducersList,
 } from '../../../../shared/lib/components/DynamicModuleLoader';
 import {
-  articlesPageActions,
   articlesPageReducer,
   getArticles,
 } from '../../model/slices/articlesPageSlice';
 import { useInitialEffect } from '../../../../shared/lib/hooks/useInitialEffect';
 import { useAppDispatch } from '../../../../shared/lib/hooks/useAppDispatch';
 import {
+  getArticlesPageInitialized,
   getArticlesPageIsLoading, getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage';
@@ -38,13 +38,16 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   const isLoading = useSelector(getArticlesPageIsLoading);
   const view = useSelector(getArticlesPageView);
   const [searchParams] = useSearchParams();
+  const initialised = useSelector(getArticlesPageInitialized);
 
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage());
   }, [dispatch]);
 
   useInitialEffect(() => {
+    // if (!initialised) {
     dispatch(initArticlesPage(searchParams));
+    // }
   });
 
   return (
@@ -59,6 +62,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
           isLoading={isLoading}
           view={view}
           articles={articles}
+          key={Date.now()}
         />
       </Page>
     </DynamicModuleLoader>

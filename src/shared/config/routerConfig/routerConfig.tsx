@@ -5,7 +5,6 @@ import { NotFoundPage } from 'pages/NotFoundPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import { ArticlesPage } from 'pages/ArticlesPage';
 import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
-import { useSelector } from 'react-redux';
 import { ArticleEditPage } from '../../../pages/ArticleEditPage';
 
 export type AppRoutesProps = RouteProps & {
@@ -24,7 +23,7 @@ export enum AppRoutes {
   NOT_FOUND = 'notFound',
 }
 
-export const BASE_URL = '';
+export const BASE_URL = '/mariawebatelier';
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: `${BASE_URL}/`,
