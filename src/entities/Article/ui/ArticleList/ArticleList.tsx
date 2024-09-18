@@ -1,6 +1,5 @@
 import React, { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { use } from 'i18next';
 import {
   List, ListRowProps, WindowScroller,
 } from 'react-virtualized';
@@ -37,8 +36,7 @@ export const ArticleList = memo((props:ArticleListProps) => {
   const { t } = useTranslation('article');
 
   const isList = view === ArticleView.LIST;
-
-  const itemsPerRow = isList ? 1 : 3;
+  const itemsPerRow = isList ? 1 : 4;
   const rowCount = isList ? articles.length : Math.ceil(articles.length / itemsPerRow);
 
   const rowRender = ({
@@ -47,6 +45,7 @@ export const ArticleList = memo((props:ArticleListProps) => {
     const items = [];
     const fromIndex = index * itemsPerRow;
     const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
+
     for (let i = fromIndex; i < toIndex; i += 1) {
       items.push(
         <ArticleListItem
