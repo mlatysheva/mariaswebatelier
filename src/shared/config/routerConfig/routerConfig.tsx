@@ -12,6 +12,7 @@ export type AppRoutesProps = RouteProps & {
 }
 
 export enum AppRoutes {
+  HOME = 'home',
   MAIN = 'main',
   ABOUT = 'about',
   PROFILE = 'profile',
@@ -26,6 +27,7 @@ export enum AppRoutes {
 export const BASE_URL = '/mariawebatelier';
 
 export const RoutePath: Record<AppRoutes, string> = {
+  [AppRoutes.HOME]: '/',
   [AppRoutes.MAIN]: `${BASE_URL}/`,
   [AppRoutes.ABOUT]: `${BASE_URL}/about`,
   [AppRoutes.PROFILE]: `${BASE_URL}/profile/`, // + :id
@@ -38,6 +40,11 @@ export const RoutePath: Record<AppRoutes, string> = {
 };
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
+  [AppRoutes.HOME]: {
+    path: RoutePath.home,
+    element: <MainPage />,
+    index: true,
+  },
   [AppRoutes.MAIN]: {
     path: RoutePath.main,
     element: <MainPage />,
